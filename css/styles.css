@@ -57,14 +57,13 @@ nav a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 90%;
+  width: 100%;
   max-width: 450px;
   margin: auto;
-  margin-top: -50px;
 }
 
 .logodiamond img {
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .cta {
@@ -84,6 +83,15 @@ nav a {
   text-transform: uppercase;
   font-size: 1.6em;
   background-color: rgba(6, 39, 47, 1);
+  transition-property: all;
+  transition-duration: 5ms;
+}
+
+.cta:hover,
+.cta-small:hover {
+  color: rgba(6, 39, 47, 1);
+  background-color: rgba(64, 42, 17, 1);
+  text-decoration-color: rgba(6, 39, 47, 1);
 }
 
 .cta a,
