@@ -34,7 +34,7 @@
       <img src="images/Cart.png" alt="Shopping cart icon" class="cart-img" />
     </header>
     <main>
-      <div class="logodiamond">
+      <section class="logodiamond">
         <img
           src="images/Logodiamond.png"
           alt="Rainydayslogo picturing a siluette of a person walking in the sunset"
@@ -42,13 +42,36 @@
         <div class="h1-background">
           <h1>Contact Us</h1>
         </div>
-      </div>
-      <div class="cta">
-        <a href="products/womens.html">Womens Collection</a>
-      </div>
-      <div class="cta-small">
-        <a href="products/mens.html">Mens Collection</a>
-      </div>
+      </section>
+      <section class="contact">
+        <div class="wrapper">
+          <p class="contact-text">
+            For any inquiries about our products, shop or shipping feel free to
+            send us a message.
+          </p>
+          <form method="post"></form>
+          <section class="contact-form">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" />
+            <label for="email">E-mail Address</label>
+            <input type="email" name="email" />
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" />
+          </section>
+          <section class="contact-message">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <div class="contact-submit">
+              <input type="submit" name="Send" />
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
     <footer>
       <section>
