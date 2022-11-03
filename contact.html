@@ -39,34 +39,28 @@
           src="images/Logodiamond.png"
           alt="Rainydayslogo picturing a siluette of a person walking in the sunset"
         />
-        <div class="h1-background">
-          <h1>Contact Us</h1>
-        </div>
       </section>
       <section class="contact">
+        <h1>Contact Us</h1>
         <div class="wrapper">
           <p class="contact-text">
-            For any inquiries about our products, shop or shipping feel free to
+            For any inquiries about our products, shop or shipping, feel free to
             send us a message.
           </p>
-          <form method="post"></form>
+          <form method="POST"></form>
           <section class="contact-form">
             <label for="name">Full Name</label>
             <input type="text" name="name" />
             <label for="email">E-mail Address</label>
             <input type="email" name="email" />
             <label for="subject">Subject</label>
-            <input type="text" name="subject" />
+            <input type="text" id="subject" name="subject" />
           </section>
           <section class="contact-message">
             <label for="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
+            <textarea name="message" id="message" cols="25" rows="5"></textarea>
             <div class="contact-submit">
+              <a href="index.html" id="gohome">Go Home</a>
               <input type="submit" name="Send" />
             </div>
           </section>
@@ -96,7 +90,7 @@
             <p>Twitter</p>
           </div>
         </div>
-        <p class="copyright">&copy; copyright</p>
+        <p class="copyright">copyright &copy;</p>
       </section>
     </footer>
   </body>
