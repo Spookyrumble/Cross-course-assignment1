@@ -1,4 +1,6 @@
-HTML-CSS_CA_HMA_2022_rainy-days# Project Title
+# Project Title
+
+2022_HTML-CSS_CA_HMA_rainy-days
 
 ## Description
 
@@ -18,21 +20,11 @@ A webshop for his and hers jackets made for educational purposes.
 
 ### Executing program
 
-- hosted link
-
-OR
-
-- How to run the program
-- Step-by-step bullets
-
-code blocks for commands
-
-## Help
-
-Any advice for common problems or issues.
-
-- command to run if the program contains helper info
+https://chic-lollipop-939ca8.netlify.app/
 
 ## Authors
 
-Contributors' names and contact info
+Hans Marius Andreassen
+hmandreassen82@gmail.com
+Twitter: @HansMarAnd
+Github: HMAsp
