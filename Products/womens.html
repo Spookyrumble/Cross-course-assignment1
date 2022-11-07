@@ -8,12 +8,9 @@
       name="description"
       content="We have all the jackets you would ever need!"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Rainydays | Home</title>
   </head>
@@ -25,8 +22,8 @@
       /></label>
       <nav>
         <!-- remember active class -->
-        <a class="active" href="index.html">Home</a>
-        <a href="womens.html">For Her</a>
+        <a href="index.html">Home</a>
+        <a class="active" href="womens.html">For Her</a>
         <a href="mens.html">For Him</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
@@ -36,64 +33,109 @@
     <main>
       <section class="logodiamond">
         <img
-          src="../images/Logodiamond.png"
-          alt="Rainydayslogo picturing a siluette of a person walking in the sunset"
+          src="../images/Logodiamond womens.png"
+          alt="Woman on a windy cliff looking out in to fog"
         />
         <div class="h1-background">
           <h1>Womens jackets</h1>
         </div>
       </section>
-      <section class="products">
-        <div class="product-sizecheckbox">
-          <input type="checkbox" id="small" />
-          <input type="checkbox" id="medium" />
-          <input type="checkbox" id="large" />
-        </div>
-        <div class="products-name">
-            <p>Sailor jacket</p>
-            <p>$ 59.99</p>
+      <section class="products-container">
+        <div class="card">
+            <div class="sizeboxes">
+              <input type="checkbox" id="c1small"/>
+              <label for="small" class="labelbox" id="l1small">s</label>
+              <input type="checkbox" name="M" id="medium"/>
+              <label for="medium" class="labelbox" id="c1medium">m</label>
+              <input type="checkbox" name="L" id="large"/>
+              <label for="large" class="labelbox" id="c1large">l</label>
+            </div>
+          <div class="card__image">
+            <a href="product detail women.html"><img class="sailor" src="../images/RainyDays_Jacket1 2.png" alt="Gray and orange sailor jacket with a high neck and waterproof shell"></a>
+            <a href="product detail women.html">Click for more</a>
           </div>
-        <div class="products-jacket">
-          <img
-            src="../images/RainyDays_Jacket1 2.png"
-            alt="Orange and grey sailor jacket with a high neck"
-          />
+          <div class="nameprice">
+            <h2>Sailor Jacket</h2>
+            <h3>$ 59.99</h3>
+          </div>
+            <div class="product-cta">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="product-moreinfo">
-          <a href="#">Click for more</a>
+        <div class="card">
+            <div class="sizeboxes">
+              <input type="checkbox" id="small"/>
+              <label for="small" class="labelbox">s</label>
+              <input type="checkbox" name="M" id="medium"/>
+              <label for="medium" class="labelbox">m</label>
+              <input type="checkbox" name="L" id="large"/>
+              <label for="large" class="labelbox">l</label>
+             </div>
+          <div class="card__image">
+            <!-- remember img alt -->
+            <img class="sailor" src="../images/RainyDays_Jacket6 2.png" alt="Gray and orange sailor jacket with a high neck and waterproof shell">
+            <a href="">Click for more</a>
+          </div>
+          <div class="nameprice">
+            <h2>Race Jacket</h2>
+            <h3>$ 49.99</h3>
+          </div>
+            <div class="product-cta">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
         </div>
-           <div class="product-buttons">
-          <a href="#" class="cta">Add to cart</a>
-          <a href="#" class="cta">Quick buy</a>
+        <div class="card">
+            <div class="sizeboxes">
+                 <input type="checkbox" id="small"/>
+                 <label for="small" class="labelbox">s</label>
+                 <input type="checkbox" name="M" id="medium"/>
+                 <label for="medium" class="labelbox">m</label>
+                 <input type="checkbox" name="L" id="large"/>
+                 <label for="large" class="labelbox">l</label>
+            </div>    
+          <div class="card__image">
+            <!-- remember img alt -->
+            <img class="sailor" src="../images/RainyDays_Jacket4 2.png" alt="Gray and orange sailor jacket with a high neck and waterproof shell">
+            <a href="#">Click for more</a>
+          </div>
+          <div class="nameprice">
+            <h2>Action Jacket</h2>
+            <h3>$ 49.99</h3>
+          </div>
+            <div class="product-cta">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <section>
-        <div class="mountainlogo">
-          <img src="../images/RainyDays_mountain.png" alt="mountain siluette" />
-        </div>
-        <div class="socialmedia">
-          <div>
-            <img src="../images/instagram.png" alt="Instagram logo icon" />
-            <p>Instagram</p>
-          </div>
-          <div>
-            <img src="../images/Facebook.png" alt="facebook logo icon" />
-            <p>Facebook</p>
-          </div>
-          <div>
-            <img src="../images/Tiktok.png" alt="tiktok logo icon" />
-            <p>TikTok</p>
-          </div>
-          <div>
-            <img src="../images/twitter.png" alt="twitter logo icon" />
-            <p>Twitter</p>
-          </div>
-        </div>
-        <p class="copyright">&copy; copyright</p>
-      </section>
+        <section class="footer">
+            <div class="mountainlogo">
+            <img src="../images/RainyDays_mountain.png" alt="mountain siluette" />
+            </div>
+            <div class="socialmedia">
+            <div>
+                <img src="../images/instagram.png" alt="Instagram logo icon" />
+                <p>Instagram</p>
+            </div>
+            <div>
+                <img src="../images/Facebook.png" alt="facebook logo icon" />
+                <p>Facebook</p>
+            </div>
+            <div>
+                <img src="../images/Tiktok.png" alt="tiktok logo icon" />
+                <p>TikTok</p>
+            </div>
+            <div>
+                <img src="../images/twitter.png" alt="twitter logo icon" />
+                <p>Twitter</p>
+            </div>
+            </div>
+            <p class="copyright">&copy; copyright</p>
+        </section>
     </footer>
   </body>
 </html>
