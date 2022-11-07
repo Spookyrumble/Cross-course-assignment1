@@ -68,6 +68,10 @@ main {
   /* margin-bottom: 200px; */
 }
 
+.aboutmain {
+  margin-bottom: 50px;
+}
+
 .logodiamond {
   display: flex;
   flex-direction: column;
@@ -123,8 +127,9 @@ main {
   flex-direction: column;
   background-color: rgba(64, 42, 17, 1);
   color: rgba(186, 227, 240, 1);
-  width: auto;
-  margin: -40px 0px 40px 0px;
+  /* width: auto; */
+  max-width: 630px;
+  margin: -40px auto 40px auto;
   border-radius: 5px;
   text-transform: uppercase;
 }
@@ -204,7 +209,7 @@ footer {
   text-decoration: underline;
 }
 
-/* CONTACT PAGE */
+/* CONTACT PAGE & ABOUT */
 
 .contact {
   position: relative;
@@ -226,6 +231,10 @@ footer {
   flex-direction: column;
 }
 
+.wrapper h2 {
+  margin: 0px auto;
+}
+
 .wrapper section {
   align-content: center;
 }
@@ -241,9 +250,10 @@ footer {
 }
 
 .contact-text {
-  max-width: 265px;
+  max-width: 420px;
   font-size: 1em;
   margin: 10px auto;
+  padding-bottom: 10px;
 }
 
 /* .contact-message {
@@ -305,9 +315,12 @@ footer {
 
 .products-container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 100px;
+  max-width: 650px;
+  margin: auto;
 }
 
 .card {
