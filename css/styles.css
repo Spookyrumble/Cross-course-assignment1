@@ -1,15 +1,25 @@
 /* GLOBAL */
+
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap");
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  min-height: 850px;
+  /* height: 100vh; */
+  /* min-height: 850px; */
+  min-height: 100vh;
+  /* max-height: 100vh; */
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgba(163, 139, 130, 1);
 }
 
 body {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   background-image: url(../images/unsplash_jD34AmVhESc.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -53,6 +63,11 @@ nav a {
 }
 
 /* MAIN */
+main {
+  position: relative;
+  /* margin-bottom: 200px; */
+}
+
 .logodiamond {
   display: flex;
   flex-direction: column;
@@ -125,6 +140,7 @@ nav a {
 }
 
 /* FOOTER */
+
 .mountainlogo {
   width: 100%;
   margin: auto;
@@ -160,13 +176,15 @@ nav a {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(6, 39, 47, 1);
   background-position: bottom;
-  position: sticky;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 100%;
   height: 80px;
+  margin-top: auto;
   margin-bottom: 0px;
   border-top-style: outset;
   border-top-color: rgba(186, 227, 240, 1);
@@ -192,7 +210,7 @@ footer {
   position: relative;
   background-color: rgba(64, 42, 17, 1);
   max-width: 600px;
-  margin: -60px auto;
+  margin: -60px auto 60px;
   color: rgba(186, 227, 240, 1);
   border-radius: 5px;
 }
@@ -285,12 +303,141 @@ footer {
 
 /* PRODUCT PAGE */
 
-.products {
-  border-style: groove;
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(64, 42, 17, 1);
+  height: 220px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card__image {
+  grid-column: 2;
+  grid-row: 1;
+  height: 150px;
+  width: 120px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.clickmore {
+  grid-column: 2;
+  grid-row: 2;
+  align-items: center;
+}
+
+.card__image a {
+  grid-column: 2;
+  grid-row: 2;
+  color: rgba(186, 227, 240, 1);
+  font-size: 0.5rem;
+  text-decoration: none;
+}
+
+.sizeboxes {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.sizeboxes input {
+  display: none;
+  /* appearance: ;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
   border-radius: 5px;
-  max-width: 300px;
-  max-height: 220px;
-  margin: auto;
+  background-color: rgba(163, 139, 130, 1); */
+}
+
+.labelbox {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  width: 1em;
+  height: 1.25em;
+  font-size: 0.8rem;
+  color: rgba(6, 39, 47, 1);
+  padding: 0px 4px;
+  cursor: pointer;
+  background-color: rgba(163, 139, 130, 1);
+  border-radius: 5px;
+  border-style: outset;
+  border-width: thin;
+  border-color: rgba(6, 39, 47, 1);
+}
+
+.nameprice {
+  grid-column: 2/4;
+  grid-row: 1;
+  align-self: start;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0px 10px;
+  color: rgba(186, 227, 240, 1);
+}
+.nameprice h2 {
+  font-size: 1.8em;
+  margin-bottom: 0px;
+}
+
+.nameprice h3 {
+  font-size: 2em;
+  margin-top: 5px;
+}
+
+.product-cta {
+  grid-column: 2/4;
+  grid-row: 2;
+  text-align: right;
+  align-self: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.product-cta a {
+  grid-column: 2;
+  grid-row: 2;
+  color: rgba(186, 227, 240, 1);
+  font-size: 0.7rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: rgba(6, 39, 47, 1);
+  border-radius: 5px;
+  border-style: outset;
+  border-width: thin;
+  text-transform: uppercase;
+  border-color: rgba(186, 227, 240, 1);
+}
+
+.product-cta a:hover {
+  background-color: rgba(186, 227, 240, 1);
+  color: rgba(6, 39, 47, 1);
+}
+
+/* PRODUCT DETAIL PAGE */
+.jacket-detail {
+  display: block;
+  width: 100%;
+  margin: -100px auto 60px auto;
+  max-width: 275px;
+  max-height: 356px;
+}
+
+.contact_detail {
+  max-width: 690px;
 }
 
 /*  */
