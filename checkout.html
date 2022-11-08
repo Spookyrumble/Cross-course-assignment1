@@ -50,7 +50,8 @@
             <img src="images/RainyDays_Jacket1 2.png" alt="" />
           </div>
           <div class="itemandprice">
-            <p>Sailor jacket</p>
+            <p>1x Sailor jacket</p>
+            <p id="size">Size: Large</p>
             <p>$ 59.99</p>
           </div>
           <div class="shipping">
@@ -61,6 +62,31 @@
             <p>Sum Total</p>
             <p>$ 62.98</p>
           </div>
+        </section>
+        <section>
+          <form class="checkoutform" action="confirmation.html">
+            Checkout
+            <input type="text" id="name" placeholder="Full name" required />
+            <input type="email" id="email" placeholder="Email address" />
+            <input type="address" id="address" placeholder="Street address" />
+            <div class="checkoutform__postal">
+              <input type="text" id="postal" placeholder="Post address" />
+              <input type="number" id="zip" placeholder="zip" />
+            </div>
+            <div class="checkoutform__creditcard">
+              <input
+                type="text"
+                id="creditcard"
+                placeholder="Credit card number"
+              />
+              <input type="number" id="expire" placeholder="exp" />
+              <input type="number" id="cvv" placeholder="cvv" />
+            </div>
+            <input type="submit" id="checkout__cta" value="Buy Now" />
+          </form>
+          <a href="products/product detail women.html" id="checkout__cta_back"
+            >Go Back</a
+          >
         </section>
       </section>
     </main>
