@@ -315,6 +315,12 @@ footer {
   border-radius: 10px;
 }
 
+#c1small:checked + #l1small {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
 .card__image {
   grid-column: 2;
   grid-row: 1;
