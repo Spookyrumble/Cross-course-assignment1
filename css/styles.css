@@ -256,10 +256,6 @@ footer {
   padding-bottom: 10px;
 }
 
-/* .contact-message {
-  margin-left: 50%;
-} */
-
 .contact-form {
   width: 260px;
   margin-bottom: 10px;
@@ -453,4 +449,11 @@ footer {
   max-width: 690px;
 }
 
-/*  */
+/* CONFIRMATION */
+
+.cta__confirmation {
+  font-size: 1em;
+  text-transform: none;
+  max-width: 200px;
+  margin-top: 0px;
+}
