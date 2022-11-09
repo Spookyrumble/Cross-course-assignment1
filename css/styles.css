@@ -315,10 +315,115 @@ footer {
   border-radius: 10px;
 }
 
+/* SIZE CHECKBOX SPAM */
 #c1small:checked + #l1small {
   background-color: rgba(64, 42, 17, 1);
   border-color: rgba(163, 139, 130, 1);
   color: rgba(186, 227, 240, 1);
+}
+
+#c1medium:checked + #l1medium {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c1large:checked + #l1large {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(64, 42, 17, 1);
+  background-image: url(../images/checked_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  back
+}
+
+#c2small:checked + #l2small {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c2medium:checked + #l2medium {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c2large:checked + #l2large {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(64, 42, 17, 1);
+  background-image: url(../images/checked_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  back
+}
+
+#c3small:checked + #l3small {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c3medium:checked + #l3medium {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c3large:checked + #l3large {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(64, 42, 17, 1);
+  background-image: url(../images/checked_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  back
+}
+
+#c4small:checked + #l4small {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c4medium:checked + #l4medium {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c4large:checked + #l4large {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(64, 42, 17, 1);
+  background-image: url(../images/checked_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  back
+}
+
+#c5small:checked + #l5small {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c5medium:checked + #l5medium {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(186, 227, 240, 1);
+}
+
+#c5large:checked + #l5large {
+  background-color: rgba(64, 42, 17, 1);
+  border-color: rgba(163, 139, 130, 1);
+  color: rgba(64, 42, 17, 1);
+  background-image: url(../images/checked_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  back
 }
 
 .card__image {
@@ -354,12 +459,6 @@ footer {
 
 .sizeboxes input {
   display: none;
-  /* appearance: ;
-  display: inline-block;
-  height: 17px;
-  width: 17px;
-  border-radius: 5px;
-  background-color: rgba(163, 139, 130, 1); */
 }
 
 .labelbox {
@@ -384,6 +483,7 @@ footer {
   grid-row: 1;
   align-self: start;
   font-size: 0.5rem;
+  font-weight: lighter;
   text-transform: uppercase;
   text-align: right;
   margin: 0px 10px;
