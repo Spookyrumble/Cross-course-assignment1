@@ -14,6 +14,8 @@ A webshop for his and hers jackets made for educational purposes.
 
 - Card hover removed because it bugged out the flexbox.
 
+- Checkout cta's moved to have the name:required function
+
 ### Executing program
 
 Web:

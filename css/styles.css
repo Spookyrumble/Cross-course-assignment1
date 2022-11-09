@@ -204,6 +204,7 @@ footer {
   margin: -60px auto 60px;
   color: rgba(186, 227, 240, 1);
   border-radius: 5px;
+  padding-bottom: 20px;
 }
 
 .contact h1 {
@@ -631,6 +632,27 @@ footer {
   font-weight: bold;
 }
 
+.trashcan {
+  grid-column: 4;
+  grid-row: 3;
+  align-self: center;
+  justify-self: end;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: -30px;
+}
+/* CHECKOUT EMPTY */
+.emptytext {
+  grid-column: 3/5;
+  grid-row: 2/3;
+  align-self: end;
+}
+
+.emptytext p {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* CHECKOUT FORM */
 .checkoutform {
   display: flex;
   flex-direction: column;
@@ -735,25 +757,22 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   padding: 5px 0px;
 }
 
-#checkout__cta:hover {
+#checkout__cta:hover,
+#checkout__cta_back:hover {
   color: rgba(6, 39, 47, 1);
   background-color: rgba(186, 227, 240, 1);
 }
 
 #checkout__cta_back {
-  /* width: 250px;
-  height: 50px;
-  margin: auto;
-  color: rgba(186, 227, 240, 1);
-  background-color: rgba(6, 39, 47, 1);
-  border: thin solid; */
+  display: flex;
+  position: relative;
   color: rgba(186, 227, 240, 1);
   background-color: rgba(6, 39, 47, 1);
   border: thin solid;
   border-radius: 5px;
-  padding: 2px 0px;
-  margin-top: -5px;
-  text-align: center;
+  padding: 1px 0px;
+  margin: -85px auto 60px auto;
+  justify-content: center;
   text-decoration: none;
   max-width: 100px;
   font-size: smaller;
