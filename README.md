@@ -10,6 +10,10 @@ A webshop for his and hers jackets made for educational purposes.
 
 - Removed quick buy button from product list.
 
+- Product counter is non functional because I could not figure out if it was even doable with HTML and CSS only.
+
+- Card hover removed because it bugged out the flexbox.
+
 ### Executing program
 
 Web:
