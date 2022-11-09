@@ -6,21 +6,17 @@
 
 A webshop for his and hers jackets made for educational purposes.
 
-<!-- ## Getting Started
+## Changes made from the figma design:
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing the program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders -->
+- Removed quick buy button from product list.
 
 ### Executing program
 
+Web:
 https://chic-lollipop-939ca8.netlify.app/
+
+Figma prototype (some changes has been implemented):
+https://www.figma.com/file/b8mN054iAOAhxxhDOAhUPB/Design_CA_hans-marius-andreassen_wp?node-id=57%3A469
 
 ## Authors
 

@@ -335,7 +335,6 @@ footer {
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
-  back
 }
 
 #c2small:checked + #l2small {
@@ -357,7 +356,6 @@ footer {
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
-  back
 }
 
 #c3small:checked + #l3small {
@@ -379,7 +377,6 @@ footer {
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
-  back
 }
 
 #c4small:checked + #l4small {
@@ -401,7 +398,6 @@ footer {
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
-  back
 }
 
 #c5small:checked + #l5small {
@@ -423,7 +419,20 @@ footer {
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
-  back
+}
+/* END CHECKBOX SPAM */
+
+.counter {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+  align-self: center;
+}
+
+.counter img {
+  width: 80px;
+  height: 20px;
+  margin-bottom: -6px;
 }
 
 .card__image {
@@ -435,18 +444,21 @@ footer {
   margin-top: 20px;
 }
 
-.clickmore {
-  grid-column: 2;
-  grid-row: 2;
-  align-items: center;
-}
-
 .card__image a {
   grid-column: 2;
   grid-row: 2;
   color: rgba(186, 227, 240, 1);
   font-size: 0.5rem;
   text-decoration: none;
+}
+
+.card__image a img {
+  margin-bottom: -15px;
+  position: relative;
+}
+
+.card__image a img:hover {
+  opacity: 85%;
 }
 
 .sizeboxes {
@@ -729,10 +741,20 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 }
 
 #checkout__cta_back {
-  width: 250px;
+  /* width: 250px;
   height: 50px;
   margin: auto;
   color: rgba(186, 227, 240, 1);
   background-color: rgba(6, 39, 47, 1);
+  border: thin solid; */
+  color: rgba(186, 227, 240, 1);
+  background-color: rgba(6, 39, 47, 1);
   border: thin solid;
+  border-radius: 5px;
+  padding: 2px 0px;
+  margin-top: -5px;
+  text-align: center;
+  text-decoration: none;
+  max-width: 100px;
+  font-size: smaller;
 }
