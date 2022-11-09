@@ -213,29 +213,6 @@ footer {
   padding-top: 10px;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.wrapper h2 {
-  margin: 0px auto;
-}
-
-.wrapper section {
-  align-content: center;
-}
-
-.wrapper > * {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  max-width: 400px;
-  margin: 0px auto;
-  /* font-size: 1em; */
-}
-
 .contact-text {
   max-width: 420px;
   font-size: 1em;
@@ -423,19 +400,6 @@ footer {
 }
 /* END CHECKBOX SPAM */
 
-.counter {
-  grid-column: 2;
-  grid-row: 2;
-  text-align: center;
-  align-self: center;
-}
-
-.counter img {
-  width: 80px;
-  height: 20px;
-  margin-bottom: -6px;
-}
-
 .card__image {
   grid-column: 2;
   grid-row: 1;
@@ -541,7 +505,51 @@ footer {
   color: rgba(6, 39, 47, 1);
 }
 
+.counter {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+  align-self: center;
+}
+
 /* PRODUCT DETAIL PAGE */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 100px;
+}
+
+.wrapper > * {
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0px auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.detail__counter {
+  justify-content: center;
+  align-self: center;
+}
+
+.detail__counter img {
+  width: 80px;
+  height: 20px;
+}
+
+#detail__sizeboxes {
+  display: block;
+  justify-content: center;
+  align-self: center;
+}
+#detail__sizeboxes label {
+  margin: 0px 5px;
+}
+
 .jacket-detail {
   display: block;
   width: 100%;
@@ -552,6 +560,50 @@ footer {
 
 .contact_detail {
   max-width: 690px;
+  margin-bottom: 100px;
+}
+
+.detail__counter img {
+  width: 80px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.detail__price p {
+  font-size: 1.2rem;
+}
+
+.contact-text {
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.contact_detail h2 {
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 10rem;
+  margin: -85px auto 100px auto;
+}
+
+.detail__cta_buy,
+.detail__cta_back {
+  background-color: rgba(6, 39, 47, 1);
+  border: thin solid rgba(186, 227, 240, 1);
+  border-radius: 5px;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.detail__cta_buy a,
+.detail__cta_back a {
+  color: rgba(186, 227, 240, 1);
+  text-decoration: none;
 }
 
 /* CONFIRMATION */

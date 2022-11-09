@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="We have all the jackets you would ever need!"
-    />
+    <meta name="description" content="Raidydays product detail for her" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Rainydays | Home</title>
+    <title>Rainydays | Product details</title>
   </head>
   <body>
     <header>
@@ -46,17 +43,41 @@
         alt="Gray and orange sailor jacket with a high neck and waterproof shell"
       />
       <section class="contact contact_detail">
-        <!-- <h1>Sailor Jacket</h1> -->
         <div class="wrapper">
-          <h2 class="contact-text">Rainydays push the comfort zone.</h2>
-          <p class="contact-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Repellendus voluptates nam tempore autem dolorem exercitationem.
-            Voluptate, sed delectus perspiciatis quasi ex tempora nam odit
-            consectetur illum dolorem earum maxime rerum molestiae quae odio
-            iste dicta eaque doloribus in recusandae error neque maiores aliquid
-            architecto. Exercitationem nesciunt aperiam eveniet illo totam.
-          </p>
+          <div class="detail__counter">
+            <img
+              src="../images/Counter.png"
+              alt="Picture of non-functioning counter"
+            />
+          </div>
+          <div id="detail__sizeboxes" class="sizeboxes">
+            <input type="checkbox" name="c1small" id="c1small" />
+            <label for="c1small" class="labelbox" id="l1small">s</label>
+            <input type="checkbox" name="M" id="c1medium" />
+            <label for="c1medium" class="labelbox" id="l1medium">m</label>
+            <input type="checkbox" name="L" id="c1large" />
+            <label for="c1large" class="labelbox" id="l1large">l</label>
+          </div>
+          <div class="detail__price">
+            <p>$ 59.99</p>
+          </div>
+        </div>
+        <h2 class="contact-text">Sailor Jacket</h2>
+        <p class="contact-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
+          voluptates nam tempore autem dolorem exercitationem. Voluptate, sed
+          delectus perspiciatis quasi ex tempora nam odit consectetur illum
+          dolorem earum maxime rerum molestiae quae odio iste dicta eaque
+          doloribus in recusandae error neque maiores aliquid architecto.
+          Exercitationem nesciunt aperiam eveniet illo totam.
+        </p>
+      </section>
+      <section class="buttons">
+        <div class="detail__cta_buy">
+          <a href="../checkout.html">Buy Now</a>
+        </div>
+        <div class="detail__cta_back">
+          <a href="womens.html">Go Back</a>
         </div>
       </section>
     </main>
