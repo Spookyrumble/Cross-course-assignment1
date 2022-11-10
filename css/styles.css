@@ -1,7 +1,6 @@
 /* GLOBAL */
 
 @font-face {
-  /* font-family: "Roboto", sans-serif; */
   font-family: "Roboto Flex", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap");
 }
@@ -11,7 +10,6 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: rgba(163, 139, 130, 1); */
 }
 
 body {
@@ -27,6 +25,10 @@ body {
 header {
   background-color: rgba(6, 39, 47, 1);
   padding: 15px;
+}
+
+header label img {
+  position: relative;
 }
 
 nav,
@@ -54,6 +56,7 @@ nav a {
   text-transform: uppercase;
   font-size: 1em;
 }
+
 nav a:visited {
   text-decoration: none;
 }
@@ -80,7 +83,7 @@ nav a:visited {
 
 .logodiamond img,
 .logodiamond a {
-  margin: -15px auto 0px auto;
+  margin: -10px auto 0px auto;
 }
 
 .index__cta {
@@ -103,7 +106,6 @@ nav a:visited {
 
 .cta,
 .cta-small {
-  /* width: 200px; */
   color: rgba(186, 227, 240, 1);
   text-decoration: none;
   text-transform: uppercase;
@@ -201,7 +203,7 @@ footer {
   position: relative;
   background-color: rgba(64, 42, 17, 1);
   max-width: 600px;
-  margin: -60px auto 100px;
+  margin: -60px auto 10px;
   color: rgba(186, 227, 240, 1);
   border-radius: 5px;
   padding-bottom: 20px;
@@ -595,6 +597,10 @@ footer {
 
 /* CHECKOUT */
 
+#contact_checkout {
+  margin-bottom: 100px;
+}
+
 .checkout {
   display: grid;
   grid-template-columns: 30px 0.5fr 1fr 0.5fr 30px;
@@ -816,4 +822,57 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   text-decoration: none;
   max-width: 100px;
   font-size: smaller;
+}
+
+/* MEDIA */
+
+@media (max-width: 400px) {
+  .logodiamond {
+    max-width: 320px;
+  }
+
+  .logodiamond img,
+  .logodiamond a {
+    margin: auto;
+    margin-top: -5px;
+    max-width: 320px;
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  #size {
+    display: none;
+  }
+}
+
+@media (min-width: 620px) {
+  header #menu-checkbox,
+  header label img {
+    display: none;
+  }
+
+  /* nav,
+  #menu-checkbox {
+    display: flex;
+      } */
+
+  nav {
+  display: flex;
+  justify-items: space-between;
+  background-color: unset;
+  border-radius: 5px;
+  max-width: unset;
+  margin: auto;
+}
+
+  nav a {
+  color: rgba(186, 227, 240, 1);
+  text-decoration: none;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: .8em;
+  margin-top: -10px;
+
 }
