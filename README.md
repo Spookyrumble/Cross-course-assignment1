@@ -8,13 +8,15 @@ A webshop for his and hers jackets made for educational purposes.
 
 ## Changes made from the figma design:
 
-- Removed quick buy button from product list.
+- Removed quick buy button from product list/cards.
 
-- Product counter is non functional because I could not figure out if it was even doable with HTML and CSS only.
+- Product counter is non-functional because I could not figure out if it was even doable with HTML and CSS only.
 
 - Card hover removed because it bugged out the flexbox.
 
-- Checkout cta's moved to have the name:required function
+- Checkout cta's moved to have the name:required function with the input:submit.
+
+- Added checkmark to the L size checkbox. Only added this one because I used "Large" on the checkout page.
 
 ### Executing program
 

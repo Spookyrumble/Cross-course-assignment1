@@ -1,7 +1,7 @@
 /* GLOBAL */
 
 @font-face {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   font-family: "Roboto Flex", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap");
 }
@@ -9,10 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* height: 100vh; */
-  /* min-height: 850px; */
   min-height: 100vh;
-  /* max-height: 100vh; */
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgba(163, 139, 130, 1);
 }
@@ -30,7 +27,6 @@ body {
 header {
   background-color: rgba(6, 39, 47, 1);
   padding: 15px;
-  position: sticky;
 }
 
 nav,
@@ -43,19 +39,23 @@ nav,
 }
 
 nav {
-  /* position: sticky; */
+  position: absolute;
   background-color: rgba(186, 227, 240, 1);
-  border-radius: 0px 0px;
-  align-items: center;
+  border-radius: 5px;
+  max-width: 150px;
 }
 
 nav a {
   display: block;
+  color: rgba(6, 39, 47, 1);
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1em;
+}
+nav a:visited {
+  text-decoration: none;
 }
 
 .cart-img {
@@ -63,10 +63,6 @@ nav a {
 }
 
 /* MAIN */
-main {
-  position: relative;
-  /* margin-bottom: 200px; */
-}
 
 .aboutmain {
   margin-bottom: 50px;
@@ -86,33 +82,36 @@ main {
   margin: -30px 45px 0px 45px;
 }
 
-.cta,
-.cta-small {
-  max-width: 350px;
-  margin: 10px auto;
-  padding: 10px 0px;
-  text-align: center;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-size: 1, 0.2em;
-  background-color: rgba(6, 39, 47, 1);
-  transition-property: all;
-  transition-duration: 5ms;
-  border-style: groove;
-  border-color: rgba(186, 227, 240, 1);
+.index__cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 15rem;
+  margin: auto;
 }
 
-.cta a,
-.cta-small a {
-  text-decoration: none;
+.cta,
+.cta-small {
+  background-color: rgba(6, 39, 47, 1);
+  border: thin solid rgba(186, 227, 240, 1);
+  border-radius: 5px;
+  padding: 8px 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cta,
+.cta-small {
+  /* width: 200px; */
   color: rgba(186, 227, 240, 1);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .cta:hover,
 .cta-small:hover {
   color: rgba(6, 39, 47, 1);
-  background-color: rgba(64, 42, 17, 1);
-  text-decoration-color: rgba(6, 39, 47, 1);
+  background-color: rgba(186, 227, 240, 1);
 }
 
 .cta-small {
@@ -201,7 +200,7 @@ footer {
   position: relative;
   background-color: rgba(64, 42, 17, 1);
   max-width: 600px;
-  margin: -60px auto 60px;
+  margin: -60px auto 100px;
   color: rgba(186, 227, 240, 1);
   border-radius: 5px;
   padding-bottom: 20px;
@@ -230,11 +229,6 @@ footer {
   margin-top: 10px;
 }
 
-.contact-form input,
-.contact-message textarea {
-  background-color: rgba(186, 227, 240, 1);
-}
-
 #subject {
   width: 50%;
 }
@@ -255,7 +249,6 @@ footer {
   padding: 5px 10px;
   color: rgba(186, 227, 240, 1);
   background-color: rgba(6, 39, 47, 1);
-  /* text-transform: uppercase; */
   border-radius: 5px;
   text-decoration: none;
   border: none;
@@ -520,12 +513,12 @@ footer {
   gap: 10px;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 100px;
+  margin: 0px 50px;
 }
 
 .wrapper > * {
   border-radius: 5px;
-  max-width: 400px;
+  max-width: 600px;
   margin: 0px auto;
   justify-content: center;
   align-content: center;
@@ -560,7 +553,7 @@ footer {
 
 .contact_detail {
   max-width: 690px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .detail__counter img {
@@ -583,28 +576,12 @@ footer {
   font-size: 1.5rem;
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   flex-direction: column;
   max-width: 10rem;
   margin: -85px auto 100px auto;
-}
-
-.detail__cta_buy,
-.detail__cta_back {
-  background-color: rgba(6, 39, 47, 1);
-  border: thin solid rgba(186, 227, 240, 1);
-  border-radius: 5px;
-  padding: 5px 0px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.detail__cta_buy a,
-.detail__cta_back a {
-  color: rgba(186, 227, 240, 1);
-  text-decoration: none;
-}
+} */
 
 /* CONFIRMATION */
 
@@ -714,14 +691,16 @@ footer {
   padding: 10px;
 }
 
-.checkoutform input {
+.checkoutform input,
+.checkoutform textarea {
   background-color: rgba(186, 227, 240, 1);
   color: rgba(6, 39, 47, 1);
   border: none;
   border-radius: 5px;
 }
 
-.checkoutform input::placeholder {
+.checkoutform input::placeholder,
+.checkoutform textarea::placeholder {
   color: rgba(6, 39, 47, 1);
   font-size: 0.6rem;
   font-style: italic;
@@ -802,6 +781,14 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   text-align: center;
 }
 
+#subject {
+  text-indent: 30px;
+}
+
+#message {
+  text-indent: 30px;
+}
+
 #checkout__cta {
   color: rgba(186, 227, 240, 1);
   background-color: rgba(6, 39, 47, 1);
@@ -823,7 +810,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   border: thin solid;
   border-radius: 5px;
   padding: 1px 0px;
-  margin: -85px auto 60px auto;
+  margin: -125px auto 60px auto;
   justify-content: center;
   text-decoration: none;
   max-width: 100px;
