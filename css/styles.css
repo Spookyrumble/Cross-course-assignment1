@@ -11,7 +11,7 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgba(163, 139, 130, 1);
+  /* background-color: rgba(163, 139, 130, 1); */
 }
 
 body {
@@ -78,8 +78,9 @@ nav a:visited {
   margin: auto;
 }
 
-.logodiamond img {
-  margin: -30px 45px 0px 45px;
+.logodiamond img,
+.logodiamond a {
+  margin: -15px auto 0px auto;
 }
 
 .index__cta {
