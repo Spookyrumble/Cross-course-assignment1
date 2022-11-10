@@ -18,6 +18,8 @@ A webshop for his and hers jackets made for educational purposes.
 
 - Added checkmark to the L size checkbox. Only added this one because I used "Large" on the checkout page.
 
+- Tried to make nav sticky but I couldn't get it to work right with my design so I decided to let it stay on top.
+
 ### Executing program
 
 Web:
