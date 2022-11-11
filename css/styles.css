@@ -203,7 +203,7 @@ footer {
   position: relative;
   background-color: rgba(64, 42, 17, 1);
   max-width: 600px;
-  margin: -60px auto 10px;
+  margin: -60px auto 80px auto;
   color: rgba(186, 227, 240, 1);
   border-radius: 5px;
   padding-bottom: 20px;
@@ -579,13 +579,6 @@ footer {
   font-size: 1.5rem;
 }
 
-/* .buttons {
-  display: flex;
-  flex-direction: column;
-  max-width: 10rem;
-  margin: -85px auto 100px auto;
-} */
-
 /* CONFIRMATION */
 
 .cta__confirmation {
@@ -852,11 +845,6 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   header label img {
     display: none;
   }
-
-  /* nav,
-  #menu-checkbox {
-    display: flex;
-      } */
 
   nav {
     display: flex;
