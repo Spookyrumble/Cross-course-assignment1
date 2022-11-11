@@ -677,6 +677,7 @@ footer {
 .emptytext {
   grid-column: 3/5;
   grid-row: 2/3;
+  justify-content: center;
   align-self: end;
 }
 
@@ -828,7 +829,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 
 /* MEDIA */
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .logodiamond {
     max-width: 320px;
   }
@@ -847,6 +848,9 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   #size {
     display: none;
   }
+
+  .emptytext {
+    grid-column: 2/5;
 }
 
 @media (min-width: 720px) {
@@ -878,3 +882,5 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
     margin-top: -10px;
   }
 }
+
+
