@@ -62,14 +62,33 @@
         </section>
         <section>
           <form class="checkoutform" action="confirmation.html">
-            Checkout
-            <input type="text" id="name" placeholder="Full name" required />
-            <input type="email" id="email" placeholder="Email address" />
-            <input type="address" id="address" placeholder="Street address" />
+            CHECKOUT
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter full name. Required"
+              required
+            />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter Email address" />
+            <label for="address"
+              >Street Address
+              <address></address
+            ></label>
+            <input
+              type="address"
+              id="address"
+              placeholder="Street name, house/app number"
+            />
+            <label for="postal">Post Address and zip code</label>
             <div class="checkoutform__postal">
               <input type="text" id="postal" placeholder="Post address" />
               <input type="number" id="zip" placeholder="zip" />
             </div>
+            <label for="creditcard"
+              >Credit card number, expiry date and CVV</label
+            >
             <div class="checkoutform__creditcard">
               <input
                 type="text"
