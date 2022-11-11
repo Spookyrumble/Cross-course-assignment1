@@ -102,10 +102,6 @@ nav a:visited {
   padding: 8px 0px;
   margin-bottom: 10px;
   text-align: center;
-}
-
-.cta,
-.cta-small {
   color: rgba(186, 227, 240, 1);
   text-decoration: none;
   text-transform: uppercase;
@@ -534,11 +530,6 @@ footer {
 .detail__counter {
   justify-content: center;
   align-self: center;
-}
-
-.detail__counter img {
-  width: 80px;
-  height: 20px;
 }
 
 #detail__sizeboxes {
