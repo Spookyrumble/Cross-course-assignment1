@@ -840,7 +840,11 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   }
 }
 
-@media (min-width: 620px) {
+@media (min-width: 720px) {
+  #menu-checkbox:checked ~ nav {
+    display: flex;
+  }
+
   header #menu-checkbox,
   header label img {
     display: none;
