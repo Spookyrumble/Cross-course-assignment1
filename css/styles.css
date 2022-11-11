@@ -851,6 +851,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 
   .emptytext {
     grid-column: 2/5;
+  }
 }
 
 @media (min-width: 720px) {
@@ -882,5 +883,3 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
     margin-top: -10px;
   }
 }
-
-
