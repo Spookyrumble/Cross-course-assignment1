@@ -687,8 +687,13 @@ footer {
   flex-direction: column;
   max-width: 250px;
   margin: auto;
-  gap: 5px;
+  gap: 10px;
   padding: 10px;
+}
+
+.checkoutform label {
+  font-size: 0.7rem;
+  margin-bottom: -10px;
 }
 
 .checkoutform input,
@@ -725,7 +730,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 #name {
   background-image: url(../images/user\ icon.png);
   background-repeat: no-repeat;
-  text-indent: 30px;
+  text-indent: 20px;
   background-size: 12px 14px;
   background-position: 3px;
 }
@@ -733,7 +738,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 #email {
   background-image: url(../images/aspherix\ icon.png);
   background-repeat: no-repeat;
-  text-indent: 30px;
+  text-indent: 20px;
   background-size: 14px 14px;
   background-position: 3px;
 }
@@ -741,7 +746,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 #address {
   background-image: url(../images/address\ icon.png);
   background-repeat: no-repeat;
-  text-indent: 30px;
+  text-indent: 20px;
   background-size: 16px 13px;
   background-position: 3px;
 }
@@ -749,7 +754,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 #postal {
   background-image: url(../images/Location\ icon.png);
   background-repeat: no-repeat;
-  text-indent: 30px;
+  text-indent: 20px;
   background-size: 13px 14px;
   background-position: 3px;
   width: 195px;
@@ -763,7 +768,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 #creditcard {
   background-image: url(../images/creditcard\ icon.png);
   background-repeat: no-repeat;
-  text-indent: 30px;
+  text-indent: 20px;
   background-size: 16px 14px;
   background-position: 3px;
   width: 165px;
@@ -782,11 +787,11 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 }
 
 #subject {
-  text-indent: 30px;
+  text-indent: 20px;
 }
 
 #message {
-  text-indent: 30px;
+  text-indent: 20px;
 }
 
 #checkout__cta {
