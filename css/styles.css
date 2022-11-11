@@ -855,7 +855,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   }
 
   header #menu-checkbox,
-  header label img {
+  header label + img {
     display: none;
   }
 
