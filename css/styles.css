@@ -5,6 +5,15 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap");
 }
 
+:root {
+  --darkblue: rgba(6, 39, 47, 1);
+  --lightblue: rgba(186, 227, 240, 1);
+  --tan: rgba(163, 139, 130, 1);
+  --brown: rgba(64, 42, 17, 1);
+  
+
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,8 +32,12 @@ body {
 
 /* HEADER */
 header {
-  background-color: rgba(6, 39, 47, 1);
+  background-color: var(--darkblue);
   padding: 15px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 header label img {
@@ -42,14 +55,14 @@ nav,
 
 nav {
   position: absolute;
-  background-color: rgba(186, 227, 240, 1);
+  background-color: var(--lightblue);
   border-radius: 5px;
   max-width: 150px;
 }
 
 nav a {
   display: block;
-  color: rgba(6, 39, 47, 1);
+  color: var(--darkblue);
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
@@ -83,7 +96,7 @@ nav a:visited {
 
 .logodiamond img,
 .logodiamond a {
-  margin: -10px auto 0px auto;
+  margin: 30px auto 0px auto;
 }
 
 .index__cta {
@@ -96,7 +109,7 @@ nav a:visited {
 
 .cta,
 .cta-small {
-  background-color: rgba(6, 39, 47, 1);
+  background-color: var(--darkblue);
   border: thin solid rgba(186, 227, 240, 1);
   border-radius: 5px;
   padding: 8px 0px;
@@ -109,8 +122,8 @@ nav a:visited {
 
 .cta:hover,
 .cta-small:hover {
-  color: rgba(6, 39, 47, 1);
-  background-color: rgba(186, 227, 240, 1);
+  color: var(--darkblue);
+  background-color: var(--lightblue);
 }
 
 .cta-small {
@@ -118,8 +131,8 @@ nav a:visited {
 }
 
 .h1-background {
-  background-color: rgba(64, 42, 17, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  color: var(--lightblue);
   min-width: auto;
   max-width: 690px;
   margin-top: -40px;
@@ -148,12 +161,12 @@ nav a:visited {
   text-align: center;
   margin: 5px 5px;
   font-size: 0.7em;
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
   text-transform: uppercase;
 }
 
 .socialmedia a {
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
   text-decoration: none;
   font-size: 1em;
   padding: 0px;
@@ -167,7 +180,7 @@ nav a:visited {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: rgba(6, 39, 47, 1);
+  background-color: var(--darkblue);
   background-position: bottom;
   position: relative;
   bottom: 0px;
@@ -176,12 +189,12 @@ footer {
   margin-top: auto;
   margin-bottom: 0px;
   border-top-style: outset;
-  border-top-color: rgba(186, 227, 240, 1);
+  border-top-color: var(--lightblue)
 }
 
 .copyright {
-  color: rgba(186, 227, 240, 1);
-  background-color: rgba(6, 39, 47, 1);
+  color: var(--lightblue);
+  background-color: var(--darkblue);
   margin-top: -10px;
   text-align: center;
   font-size: 0.7em;
@@ -197,10 +210,10 @@ footer {
 
 .contact {
   position: relative;
-  background-color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
   max-width: 600px;
   margin: -60px auto 80px auto;
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
   border-radius: 5px;
   padding-bottom: 20px;
 }
@@ -246,15 +259,15 @@ footer {
 #gohome,
 .contact-submit input {
   padding: 5px 10px;
-  color: rgba(186, 227, 240, 1);
-  background-color: rgba(6, 39, 47, 1);
+  color: var(--lightblue);
+  background-color: var(--darkblue);
   border-radius: 5px;
   text-decoration: none;
   border: none;
   font-size: 1em;
   text-align: center;
   border-style: groove;
-  border-color: rgba(186, 227, 240, 1);
+  border-color: var(--lightblue);
   margin-bottom: 10px;
 }
 
@@ -278,7 +291,7 @@ footer {
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
   height: 220px;
   width: 300px;
   margin: 10px;
@@ -287,105 +300,105 @@ footer {
 
 /* SIZE CHECKBOX SPAM */
 #c1small:checked + #l1small {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c1medium:checked + #l1medium {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
   color: rgba(186, 227, 240, 1);
 }
 
 #c1large:checked + #l1large {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--brown);
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #c2small:checked + #l2small {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
   color: rgba(186, 227, 240, 1);
 }
 
 #c2medium:checked + #l2medium {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
   color: rgba(186, 227, 240, 1);
 }
 
 #c2large:checked + #l2large {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--brown);
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #c3small:checked + #l3small {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c3medium:checked + #l3medium {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c3large:checked + #l3large {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--brown);
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #c4small:checked + #l4small {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c4medium:checked + #l4medium {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c4large:checked + #l4large {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--brown);
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #c5small:checked + #l5small {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c5medium:checked + #l5medium {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(186, 227, 240, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--lightblue);
 }
 
 #c5large:checked + #l5large {
-  background-color: rgba(64, 42, 17, 1);
-  border-color: rgba(163, 139, 130, 1);
-  color: rgba(64, 42, 17, 1);
+  background-color: var(--brown);
+  border-color: var(--tan);
+  color: var(--brown);
   background-image: url(../images/checked_icon.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -404,7 +417,7 @@ footer {
 .card__image a {
   grid-column: 2;
   grid-row: 2;
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
   font-size: 0.5rem;
   text-decoration: none;
 }
@@ -437,14 +450,14 @@ footer {
   width: 1em;
   height: 1.25em;
   font-size: 0.8rem;
-  color: rgba(6, 39, 47, 1);
+  color: var(--darkblue);
   padding: 0px 4px;
   cursor: pointer;
-  background-color: rgba(163, 139, 130, 1);
+  background-color: var(--tan);
   border-radius: 5px;
   border-style: outset;
   border-width: thin;
-  border-color: rgba(6, 39, 47, 1);
+  border-color: var(--darkblue);
 }
 
 .nameprice {
@@ -456,7 +469,7 @@ footer {
   text-transform: uppercase;
   text-align: right;
   margin: 0px 10px;
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
 }
 .nameprice h2 {
   font-size: 1.8em;
@@ -480,21 +493,21 @@ footer {
 .product-cta a {
   grid-column: 2;
   grid-row: 2;
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
   font-size: 0.7rem;
   text-decoration: none;
   padding: 5px 10px;
-  background-color: rgba(6, 39, 47, 1);
+  background-color: var(--darkblue);
   border-radius: 5px;
   border-style: outset;
   border-width: thin;
   text-transform: uppercase;
-  border-color: rgba(186, 227, 240, 1);
+  border-color: var(--lightblue);
 }
 
 .product-cta a:hover {
-  background-color: rgba(186, 227, 240, 1);
-  color: rgba(6, 39, 47, 1);
+  background-color: var(--lightblue);
+  color: var(--darkblue);
 }
 
 .counter {
@@ -594,7 +607,7 @@ footer {
   grid-template-columns: 30px 0.5fr 1fr 0.5fr 30px;
   grid-template-rows: 30px 100px 100px 30px;
   color: black;
-  background-color: rgba(186, 227, 240, 1);
+  background-color: var(--lightblue);
 }
 
 .cart {
@@ -694,15 +707,15 @@ footer {
 
 .checkoutform input,
 .checkoutform textarea {
-  background-color: rgba(186, 227, 240, 1);
-  color: rgba(6, 39, 47, 1);
+  background-color: var(--lightblue);
+  color: var(--darkblue);
   border: none;
   border-radius: 5px;
 }
 
 .checkoutform input::placeholder,
 .checkoutform textarea::placeholder {
-  color: rgba(6, 39, 47, 1);
+  color: var(--darkblue);
   font-size: 0.6rem;
   font-style: italic;
 }
@@ -791,23 +804,23 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
 }
 
 #checkout__cta {
-  color: rgba(186, 227, 240, 1);
-  background-color: rgba(6, 39, 47, 1);
+  color: var(--lightblue);
+  background-color: var(--darkblue);
   border: thin solid;
   padding: 5px 0px;
 }
 
 #checkout__cta:hover,
 #checkout__cta_back:hover {
-  color: rgba(6, 39, 47, 1);
-  background-color: rgba(186, 227, 240, 1);
+  color: var(--darkblue);
+  background-color: var(--lightblue);
 }
 
 #checkout__cta_back {
   display: flex;
   position: relative;
-  color: rgba(186, 227, 240, 1);
-  background-color: rgba(6, 39, 47, 1);
+  color: var(--lightblue);
+  background-color: var(--darkblue);
   border: thin solid;
   border-radius: 5px;
   padding: 1px 0px;
@@ -828,7 +841,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   .logodiamond img,
   .logodiamond a {
     margin: auto;
-    margin-top: -5px;
+    margin-top: 30px;
     max-width: 320px;
   }
 
@@ -866,7 +879,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
   }
 
   nav a {
-    color: rgba(186, 227, 240, 1);
+    color: var(--lightblue);
     text-decoration: none;
     font-weight: lighter;
     text-transform: uppercase;
