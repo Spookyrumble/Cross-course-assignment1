@@ -19,9 +19,6 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
-}
-
-body {
   display: flex;
   flex-direction: column;
   background-image: url(../images/unsplash_jD34AmVhESc.jpg);
@@ -29,6 +26,7 @@ body {
   background-repeat: no-repeat;
   background-position: right bottom;
 }
+
 
 /* HEADER */
 header {
@@ -115,7 +113,7 @@ nav a:visited {
   padding: 8px 0px;
   margin-bottom: 10px;
   text-align: center;
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -323,13 +321,13 @@ footer {
 #c2small:checked + #l2small {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
 }
 
 #c2medium:checked + #l2medium {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: rgba(186, 227, 240, 1);
+  color: var(--lightblue);
 }
 
 #c2large:checked + #l2large {
