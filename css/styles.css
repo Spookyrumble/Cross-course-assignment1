@@ -6,12 +6,10 @@
 }
 
 :root {
-  --darkblue: rgba(6, 39, 47, 1);
+  --darkblue: rgba(6, 39, 47, 0.8);
   --lightblue: rgba(186, 227, 240, 1);
   --tan: rgba(163, 139, 130, 1);
-  --brown: rgba(64, 42, 17, 1);
-  
-
+  --brown: rgba(26, 16, 0, 0.7);
 }
 
 body {
@@ -26,7 +24,6 @@ body {
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-
 
 /* HEADER */
 header {
@@ -94,7 +91,7 @@ nav a:visited {
 
 .logodiamond img,
 .logodiamond a {
-  margin: 30px auto 0px auto;
+  margin: 30px auto 20px auto;
 }
 
 .index__cta {
@@ -187,7 +184,7 @@ footer {
   margin-top: auto;
   margin-bottom: 0px;
   border-top-style: outset;
-  border-top-color: var(--lightblue)
+  border-top-color: var(--lightblue);
 }
 
 .copyright {
@@ -426,7 +423,8 @@ footer {
 }
 
 .card__image a img:hover {
-  opacity: 85%;
+  /* opacity: 85%; */
+  filter: brightness(150%);
 }
 
 .sizeboxes {
@@ -554,10 +552,8 @@ footer {
 
 .jacket-detail {
   display: block;
-  width: 100%;
-  margin: -100px auto 60px auto;
-  max-width: 275px;
-  max-height: 356px;
+  transform: scale(2);
+  margin: -20px auto 135px auto;
 }
 
 .contact_detail {
@@ -881,7 +877,7 @@ The placeholder icon I struggled with. I came over info on stackoverflow which I
     text-decoration: none;
     font-weight: lighter;
     text-transform: uppercase;
-    font-size: 0.8em;
-    margin-top: -10px;
+    font-size: 1em;
+    margin-top: -8px;
   }
 }
