@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Raidydays product list for her" />
+    <meta name="description" content="Raidydays product list for him" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,9 +12,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <script defer src="js/data/products.js" type="module"></script>
-    <script defer src="js/index.js" type="module"></script>
-    <title>Rainydays | For Her</title>
+    <script defer src="../js/data/products.js" type="module"></script>
+    <script defer src="../js/details.js" type="module"></script>
+
+    <title>Rainydays | For Him</title>
     <!-- Hotjar Tracking Code for https://chic-lollipop-939ca8.netlify.app/ -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -39,11 +40,12 @@
         <img src="../images/burgermenu.png" alt="hamburgermenu icon"
       /></label>
       <nav>
-        <a href="../index.html">Home</a>
-        <a class="active" href="womens.html">For Her</a>
-        <a href="mens.html">For Him</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
+        <!-- remember active class -->
+        <a id="home" href="../index.html">Home</a>
+        <a id="forHer" href="womens.html">For Her</a>
+        <a id="forHim" class="active" href="mens.html">For Him</a>
+        <a id="about" href="../about.html">About</a>
+        <a id="contact" href="../contact.html">Contact</a>
       </nav>
       <img src="../images/Cart.png" alt="Shopping cart icon" class="cart-img" />
     </header>
@@ -51,183 +53,15 @@
       <section class="logodiamond">
         <a href="../index.html">
           <img
-            src="../images/Logodiamond_womens.png"
-            alt="Woman on a windy cliff looking out in to fog"
+            src="../images/Logodiamond_mens.png"
+            alt="Foggy view of a beach out to the water with cliffs on both sides"
           />
         </a>
         <div class="h1-background">
-          <h1>Women's jackets</h1>
+          <h1>Loading..</h1>
         </div>
       </section>
-      <div class="products-container">
-        <div class="card">
-          <div class="sizeboxes">
-            <input type="checkbox" name="c1small" id="c1small" />
-            <label for="c1small" class="labelbox" id="l1small">s</label>
-            <input type="checkbox" name="M" id="c1medium" />
-            <label for="c1medium" class="labelbox" id="l1medium">m</label>
-            <input type="checkbox" name="L" id="c1large" />
-            <label for="c1large" class="labelbox" id="l1large">l</label>
-          </div>
-          <div class="card__image">
-            <a href="product_detail_women.html">
-              <img
-                class="sailor"
-                src="../images/RainyDays_Jacket1_2.png"
-                alt="Gray and orange sailor jacket with a high neck and waterproof shell"
-              />
-            </a>
-            <a id="clickmore" href="product_detail_women.html">
-              Click for more
-            </a>
-          </div>
-          <div class="nameprice">
-            <h2>Sailor Jacket</h2>
-            <h3>$ 59.99</h3>
-          </div>
-          <div class="counter">
-            <img
-              src="../images/Counter.png"
-              alt="Picture of non-working counter"
-            />
-          </div>
-          <div class="product-cta">
-            <a href="../checkout.html">Buy Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="sizeboxes">
-            <input type="checkbox" name="c2small" id="c2small" />
-            <label for="c2small" class="labelbox" id="l2small">s</label>
-            <input type="checkbox" name="M" id="c2medium" />
-            <label for="c2medium" class="labelbox" id="l2medium">m</label>
-            <input type="checkbox" name="L" id="c2large" />
-            <label for="c2large" class="labelbox" id="l2large">l</label>
-          </div>
-          <div class="card__image">
-            <a href="product_detail_women.html">
-              <img
-                class="sailor"
-                src="../images/RainyDays_Jacket6_2.png"
-                alt="Black with white detail sports jacket. Water and wind resistent"
-              />
-            </a>
-            <a href="product_detail_women.html">Click for more</a>
-          </div>
-          <div class="nameprice">
-            <h2>Race Jacket</h2>
-            <h3>$ 49.99</h3>
-          </div>
-          <div class="counter">
-            <img
-              src="../images/Counter.png"
-              alt="Picture of non-working counter"
-            />
-          </div>
-          <div class="product-cta">
-            <a href="../checkout.html">Buy Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="sizeboxes">
-            <input type="checkbox" name="c3small" id="c3small" />
-            <label for="c3small" class="labelbox" id="l3small">s</label>
-            <input type="checkbox" name="M" id="c3medium" />
-            <label for="c3medium" class="labelbox" id="l3medium">m</label>
-            <input type="checkbox" name="L" id="c3large" />
-            <label for="c3large" class="labelbox" id="l3large">l</label>
-          </div>
-          <div class="card__image">
-            <a href="product_detail_women.html">
-              <img
-                class="sailor"
-                src="../images/RainyDays_Jacket4_2.png"
-                alt="a warm wolly wood green jacket with big warm pockets"
-              />
-            </a>
-            <a href="product_detail_women.html">Click for more</a>
-          </div>
-          <div class="nameprice">
-            <h2>Action Jacket</h2>
-            <h3>$ 49.99</h3>
-          </div>
-          <div class="counter">
-            <img
-              src="../images/Counter.png"
-              alt="Picture of non-working counter"
-            />
-          </div>
-          <div class="product-cta">
-            <a href="../checkout.html">Buy Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="sizeboxes">
-            <input type="checkbox" name="c4small" id="c4small" />
-            <label for="c4small" class="labelbox" id="l4small">s</label>
-            <input type="checkbox" name="M" id="c4medium" />
-            <label for="c4medium" class="labelbox" id="l4medium">m</label>
-            <input type="checkbox" name="L" id="c4large" />
-            <label for="c4large" class="labelbox" id="l4large">l</label>
-          </div>
-          <div class="card__image">
-            <a href="product_detail_women.html">
-              <img
-                class="sailor"
-                src="../images/RainyDays_Jacket7_1.png"
-                alt="Gray and orange sailor jacket with a high neck and waterproof shell"
-              />
-            </a>
-            <a href="product_detail_women.html">Click for more</a>
-          </div>
-          <div class="nameprice">
-            <h2>Wool Jacket</h2>
-            <h3>$ 39.99</h3>
-          </div>
-          <div class="counter">
-            <img
-              src="../images/Counter.png"
-              alt="Picture of non-working counter"
-            />
-          </div>
-          <div class="product-cta">
-            <a href="../checkout.html">Buy Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="sizeboxes">
-            <input type="checkbox" name="c5small" id="c5small" />
-            <label for="c5small" class="labelbox" id="l5small">s</label>
-            <input type="checkbox" name="M" id="c5medium" />
-            <label for="c5medium" class="labelbox" id="l5medium">m</label>
-            <input type="checkbox" name="L" id="c5large" />
-            <label for="c5large" class="labelbox" id="l5large">l</label>
-          </div>
-          <div class="card__image">
-            <a href="product_detail_women.html">
-              <img
-                class="sailor"
-                src="../images/RainyDays_Jacket3_3.png"
-                alt="Red and black womens shell jacket. Water and rain resistent"
-              />
-            </a>
-            <a href="product_detail_women.html">Click for more</a>
-          </div>
-          <div class="nameprice">
-            <h2>Wind Jacket</h2>
-            <h3>$ 49.99</h3>
-          </div>
-          <div class="counter">
-            <img
-              src="../images/Counter.png"
-              alt="Picture of the non-working counter"
-            />
-          </div>
-          <div class="product-cta">
-            <a href="../checkout.html">Buy Now</a>
-          </div>
-        </div>
-      </div>
+      <div class="products-container"></div>
     </main>
     <footer class="footer">
       <div class="mountainlogo">

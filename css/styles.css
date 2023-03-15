@@ -309,13 +309,10 @@ footer {
 #c1large:checked + #l1large {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: var(--brown);
-  background-image: url(../images/checked_icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--lightblue);
 }
 
-#c2small:checked + #l2small {
+/* #c2small:checked + #l2small {
   background-color: var(--brown);
   border-color: var(--tan);
   color: var(--lightblue);
@@ -330,10 +327,7 @@ footer {
 #c2large:checked + #l2large {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: var(--brown);
-  background-image: url(../images/checked_icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--lightblue);
 }
 
 #c3small:checked + #l3small {
@@ -351,10 +345,7 @@ footer {
 #c3large:checked + #l3large {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: var(--brown);
-  background-image: url(../images/checked_icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--lightblue);
 }
 
 #c4small:checked + #l4small {
@@ -372,10 +363,7 @@ footer {
 #c4large:checked + #l4large {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: var(--brown);
-  background-image: url(../images/checked_icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--lightblue);
 }
 
 #c5small:checked + #l5small {
@@ -393,11 +381,8 @@ footer {
 #c5large:checked + #l5large {
   background-color: var(--brown);
   border-color: var(--tan);
-  color: var(--brown);
-  background-image: url(../images/checked_icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  color: var(--lightblue);
+} */
 /* END CHECKBOX SPAM */
 
 .card__image {

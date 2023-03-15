@@ -2,10 +2,22 @@
 
 // console.log(jackets);
 
-const data = JSON.parse(localStorage.getItem("products"));
+const mensButton = document.querySelector(".cta-small");
 
-console.log(data);
+mensButton.addEventListener("click", function () {
+  // let searchString = new URLSearchParams(window.location.search);
+  // searchString.set("?id=men");
+  // location.href = window.location.pathname + "?" + searchString.toString();
+  const men = "men";
+  localStorage.setItem("filter", JSON.stringify(men));
+});
 
-for (let i = 0; i < data.length; i++) {
-  console.log(data[i]);
-}
+const womensButton = document.querySelector(".cta");
+
+womensButton.addEventListener("click", function () {
+  // let searchString = new URLSearchParams(window.location.search);
+  // searchString.set("?id=men");
+  // location.href = window.location.pathname + "?" + searchString.toString();
+  const women = "women";
+  localStorage.setItem("filter", JSON.stringify(women));
+});

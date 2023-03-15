@@ -10,7 +10,7 @@ const jackets = [
     type: "cold",
     model: "men",
     image: {
-      src: "../../images/RainyDays_Jacket7_1.png",
+      src: "../images/RainyDays_Jacket7_1.png",
       caption: "A warm fleece wood green jacket with big warm pockets.",
     },
   },
@@ -25,7 +25,7 @@ const jackets = [
     type: "wind",
     model: "men",
     image: {
-      src: "../../images/RainyDays_Jacket3_3.png.png",
+      src: "../images/RainyDays_Jacket3_3.png",
       caption: "Red and black light wind breaker shell jacket.",
     },
   },
@@ -40,7 +40,7 @@ const jackets = [
     type: "shell",
     model: "men",
     image: {
-      src: "../../images/RainyDays_Jacket2_2.png",
+      src: "../images/RainyDays_Jacket2_2.png",
       caption: "soft shell jacket",
     },
   },
@@ -55,7 +55,7 @@ const jackets = [
     type: "wind, rain, cold",
     model: "men",
     image: {
-      src: "../../images/RainyDays_Jacket5_2.png",
+      src: "../images/RainyDays_Jacket5_2.png",
       caption: "grey warm jacket",
     },
   },
@@ -70,7 +70,7 @@ const jackets = [
     type: "inner",
     model: "men",
     image: {
-      src: "../../images/RainyDays_Jacket7_1.png",
+      src: "../images/RainyDays_Jacket7_1.png",
       caption: "warm wool jacket",
     },
   },
@@ -85,7 +85,7 @@ const jackets = [
     type: "wind, rain",
     model: "women",
     image: {
-      src: "../../images/RainyDays_Jacket1_2.png",
+      src: "../images/RainyDays_Jacket1_2.png",
       caption: "heavy durable wind and water resistant jacket",
     },
   },
@@ -100,7 +100,7 @@ const jackets = [
     type: "Rain",
     model: "women",
     image: {
-      src: "../../images/RainyDays_Jacket6_2.png",
+      src: "../images/RainyDays_Jacket6_2.png",
       caption: "durable wind and water resistant jacket",
     },
   },
@@ -115,7 +115,7 @@ const jackets = [
     type: "snow",
     model: "women",
     image: {
-      src: "../../images/RainyDays_Jacket4_2.png",
+      src: "../images/RainyDays_Jacket4_2.png",
       caption: "durable wind and water resistant jacket",
     },
   },
@@ -130,7 +130,7 @@ const jackets = [
     type: "Inner",
     model: "women",
     image: {
-      src: "../../images/RainyDays_Jacket7_2.png",
+      src: "../images/RainyDays_Jacket7_1.png",
       caption: "wool jacket",
     },
   },
@@ -145,7 +145,7 @@ const jackets = [
     type: "wind, rain",
     model: "women",
     image: {
-      src: "../../images/RainyDays_Jacket3_3.png",
+      src: "../images/RainyDays_Jacket3_3.png",
       caption: "windbreaker shell jacket",
     },
   },
