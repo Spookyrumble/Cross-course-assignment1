@@ -39,6 +39,7 @@ for (let i = 0; i < data.length; i++) {
                                 <h3>$ ${jacket.price}</h3>
                             </div>
                             <div class="product-cta">
+                                <a href="#">Add to cart</a>
                                 <a href="../checkout.html">Buy Now</a>
                             </div>
                             </div>`;

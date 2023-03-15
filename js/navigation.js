@@ -7,9 +7,11 @@ const contact = document.querySelector("#contact");
 forHim.addEventListener("click", function () {
   const men = "men";
   localStorage.setItem("filter", JSON.stringify(men));
+  forHim.classList.add("active");
 });
 
-forher.addEventListener("click", function () {
+forHer.addEventListener("click", function () {
   const women = "women";
   localStorage.setItem("filter", JSON.stringify(women));
+  forHer.classList.add("active");
 });
