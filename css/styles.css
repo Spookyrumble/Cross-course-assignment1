@@ -441,6 +441,10 @@ footer {
   border-color: var(--darkblue);
 }
 
+.labelbox:checked {
+  color: white;
+}
+
 .nameprice {
   grid-column: 2/4;
   grid-row: 1;

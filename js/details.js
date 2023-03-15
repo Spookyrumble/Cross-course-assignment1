@@ -12,6 +12,7 @@ for (let i = 0; i < data.length; i++) {
   console.log(data[i]);
 
   let jacket = data[i];
+  console.log(jacket.jacketId);
 
   if (jacket.model === searchValue) {
     h1.innerHTML = "jackets for" + " " + searchValue;
@@ -25,7 +26,7 @@ for (let i = 0; i < data.length; i++) {
                                         <label for="c1large" class="labelbox" id="l1large">l</label>
                                     </div>
                             <div class="card__image">
-                                <a href="product_detail_women.html">
+                                <a href="product_detail_women.html?id=${jacket.jacketId}">
                                 <img
                                     class="sailor"
                                     src="${jacket.image.src}"
