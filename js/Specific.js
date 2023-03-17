@@ -22,7 +22,7 @@ for (let i = 0; i < dataFilter.length; i++) {
   imgContainer.innerHTML = `<img
                                 id="imgContainer"
                                 class="jacket-detail"
-                                src="${item.image.src}"
+                                src="${item.image.src2}"
                                 alt="${item.image.caption}"
                             />
                             <section class="contact contact_detail">

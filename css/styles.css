@@ -532,8 +532,8 @@ footer {
 
 .jacket-detail {
   display: block;
-  transform: scale(2);
-  margin: -20px auto 135px auto;
+  transform: scale(1.5);
+  margin: 50px auto 155px auto;
 }
 
 .contact_detail {

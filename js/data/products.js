@@ -11,6 +11,7 @@ const jackets = [
     model: "men",
     image: {
       src: "../images/RainyDays_Jacket7_1.png",
+      src2: "../images/RainyDays_Jacket7.png",
       caption: "A warm fleece wood green jacket with big warm pockets.",
     },
   },
@@ -26,6 +27,7 @@ const jackets = [
     model: "men",
     image: {
       src: "../images/RainyDays_Jacket3_3.png",
+      src2: "../images/RainyDays_Jacket3.png",
       caption: "Red and black light wind breaker shell jacket.",
     },
   },
@@ -41,6 +43,7 @@ const jackets = [
     model: "men",
     image: {
       src: "../images/RainyDays_Jacket2_2.png",
+      src2: "../images/RainyDays_Jacket2.png",
       caption: "soft shell jacket",
     },
   },
@@ -56,6 +59,7 @@ const jackets = [
     model: "men",
     image: {
       src: "../images/RainyDays_Jacket5_2.png",
+      src2: "../images/RainyDays_Jacket5.png",
       caption: "grey warm jacket",
     },
   },
@@ -71,6 +75,7 @@ const jackets = [
     model: "men",
     image: {
       src: "../images/RainyDays_Jacket7_1.png",
+      src2: "../images/RainyDays_Jacket7.png",
       caption: "warm wool jacket",
     },
   },
@@ -86,6 +91,7 @@ const jackets = [
     model: "women",
     image: {
       src: "../images/RainyDays_Jacket1_2.png",
+      src2: "../images/RainyDays_Jacket1.png",
       caption: "heavy durable wind and water resistant jacket",
     },
   },
@@ -101,6 +107,7 @@ const jackets = [
     model: "women",
     image: {
       src: "../images/RainyDays_Jacket6_2.png",
+      src2: "../images/RainyDays_Jacket6.png",
       caption: "durable wind and water resistant jacket",
     },
   },
@@ -116,6 +123,7 @@ const jackets = [
     model: "women",
     image: {
       src: "../images/RainyDays_Jacket4_2.png",
+      src2: "../images/RainyDays_Jacket4.png",
       caption: "durable wind and water resistant jacket",
     },
   },
@@ -131,6 +139,7 @@ const jackets = [
     model: "women",
     image: {
       src: "../images/RainyDays_Jacket7_1.png",
+      src2: "../images/RainyDays_Jacket7.png",
       caption: "wool jacket",
     },
   },
@@ -146,6 +155,7 @@ const jackets = [
     model: "women",
     image: {
       src: "../images/RainyDays_Jacket3_3.png",
+      src2: "../images/RainyDays_Jacket3.png",
       caption: "windbreaker shell jacket",
     },
   },
