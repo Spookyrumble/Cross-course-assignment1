@@ -1,47 +1,70 @@
-const container = document.querySelector(".products-container");
-const h1 = document.querySelector("h1");
+const queryString = document.location.search;
 
-const searchValue = JSON.parse(localStorage.getItem("filter"));
-// console.log(searchValue);
+const params = new URLSearchParams(queryString);
 
-const data = JSON.parse(localStorage.getItem("products"));
+const id = params.get("id");
+console.log(id);
 
-console.log(searchValue + "s" + " " + "jackets");
+const jacketData = JSON.parse(localStorage.getItem("products"));
 
-for (let i = 0; i < data.length; i++) {
-  console.log(data[i]);
+const imgContainer = document.querySelector(".detailsContainer");
+const container = document.querySelector(".contact_detail");
+const addToCart = document.querySelector("#addCart");
 
-  let jacket = data[i];
-  console.log(jacket.jacketId);
+const dataFilter = jacketData.filter(function (jacketData) {
+  return jacketData.jacketId == id;
+});
+console.table(dataFilter);
 
-  if (jacket.model === searchValue) {
-    h1.innerHTML = "jackets for" + " " + searchValue;
-    container.innerHTML += `<div class="card">
-                                    <div class="sizeboxes">
-                                        <input type="checkbox" name="c1small" id="c1small" />
-                                        <label for="c1small" class="labelbox" id="l1small">s</label>
-                                        <input type="checkbox" name="M" id="c1medium" />
-                                        <label for="c1medium" class="labelbox" id="l1medium">m</label>
-                                        <input type="checkbox" name="L" id="c1large" />
-                                        <label for="c1large" class="labelbox" id="l1large">l</label>
-                                    </div>
-                            <div class="card__image">
-                                <a href="product_detail_women.html?id=${jacket.jacketId}">
-                                <img
-                                    class="sailor"
-                                    src="${jacket.image.src}"
-                                    alt="${jacket.image.caption}"
-                                />
-                                </a>
-                            </div>
-                            <div class="nameprice">
-                                <h2>${jacket.name}</h2>
-                                <h3>$ ${jacket.price}</h3>
-                            </div>
-                            <div class="product-cta">
-                                <a href="#">Add to cart</a>
-                                <a href="../checkout.html">Buy Now</a>
-                            </div>
-                            </div>`;
-  }
+for (let i = 0; i < dataFilter.length; i++) {
+  let item = dataFilter[i];
+
+  imgContainer.innerHTML = `<img
+                                id="imgContainer"
+                                class="jacket-detail"
+                                src="${item.image.src2}"
+                                alt="${item.image.caption}"
+                            />
+                            <section class="contact contact_detail">
+                                <div class="wrapper">
+                                <div id="detail__sizeboxes" class="sizeboxes">
+                                    <input type="checkbox" name="c1small" id="c1small" />
+                                    <label for="c1small" class="labelbox" id="l1small">s</label>
+                                    <input type="checkbox" name="M" id="c1medium" />
+                                    <label for="c1medium" class="labelbox" id="l1medium">m</label>
+                                    <input type="checkbox" name="L" id="c1large" />
+                                    <label for="c1large" class="labelbox" id="l1large">l</label>
+                                </div>
+                                <div class="detail__price">
+                                    <p>$ ${item.price}</p>
+                                </div>
+                                </div>
+                                    <h1 class="contact-text">${item.name}</h1>
+                                <p class="contact-text">${item.detailText}
+                                </p>
+                                </section>
+                                <section class="index__cta">
+                                    <a id="addCart" class="cta" href="#">Add to cart</a>
+                                    <a class="cta" href="../checkout.html">Buy Now</a>
+                                    <a class="cta-small" href="#">Go Back</a>
+                                </section>`;
+  addToCart.addEventListener("click", function () {
+    const cartDetails = [
+      {
+        image: `${item.image.src}`,
+        caption: `${item.image.caption}`,
+        price: `${item.price}`,
+        name: `${item.name}`,
+        details: `${item.detailText}`,
+      },
+    ];
+
+    localStorage.setItem("cart", JSON.stringify(cartDetails));
+  });
 }
+
+const backButton = document.querySelector(".cta-small");
+
+backButton.addEventListener("click", function () {
+  history.back();
+});
