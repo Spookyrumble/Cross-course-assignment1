@@ -9,7 +9,7 @@ const jacketData = JSON.parse(localStorage.getItem("products"));
 
 const imgContainer = document.querySelector(".detailsContainer");
 const container = document.querySelector(".contact_detail");
-const addToCart = document.querySelector("#addCart");
+// const addToCart = document.querySelector("#addCart");
 
 const dataFilter = jacketData.filter(function (jacketData) {
   return jacketData.jacketId == id;
@@ -48,6 +48,9 @@ for (let i = 0; i < dataFilter.length; i++) {
                                     <a class="cta" href="../checkout.html">Buy Now</a>
                                     <a class="cta-small" href="#">Go Back</a>
                                 </section>`;
+
+  const addToCart = document.querySelector("#addCart");
+
   addToCart.addEventListener("click", function () {
     const cartDetails = [
       {
@@ -57,6 +60,7 @@ for (let i = 0; i < dataFilter.length; i++) {
         name: `${item.name}`,
         details: `${item.detailText}`,
       },
+      console.log("cart saved to storage"),
     ];
 
     localStorage.setItem("cart", JSON.stringify(cartDetails));

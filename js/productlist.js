@@ -2,7 +2,6 @@ const container = document.querySelector(".products-container");
 const h1 = document.querySelector("h1");
 
 const searchValue = JSON.parse(localStorage.getItem("filter"));
-// console.log(searchValue);
 
 const data = JSON.parse(localStorage.getItem("products"));
 
@@ -26,7 +25,7 @@ for (let i = 0; i < data.length; i++) {
                                         <label for="c1large" class="labelbox" id="l1large">l</label>
                                     </div>
                             <div class="card__image">
-                                <a href="details.html?id=${jacket.jacketId}">
+                                <a href="detail.html?id=${jacket.jacketId}">
                                 <img
                                     class="sailor"
                                     src="${jacket.image.src}"
@@ -39,15 +38,26 @@ for (let i = 0; i < data.length; i++) {
                                 <h3>$ ${jacket.price}</h3>
                             </div>
                             <div class="product-cta">
-                                <a href="#">Add to cart</a>
+                                <a id="addCart">Add to cart</a>
                                 <a href="../checkout.html">Buy Now</a>
                             </div>
                             </div>`;
+
+    const addToCart = document.querySelector("#addCart");
+
+    addToCart.addEventListener("click", function () {
+      const cartDetails = [
+        {
+          image: `${jacket.image.src}`,
+          caption: `${jacket.image.caption}`,
+          price: `${jacket.price}`,
+          name: `${jacket.name}`,
+          details: `${jacket.detailText}`,
+        },
+        console.log("cart saved to storage"),
+      ];
+
+      localStorage.setItem("cart", JSON.stringify(cartDetails));
+    });
   }
 }
-
-const backButton = document.querySelector(".cta-small");
-
-backButton.addEventListener("click", function () {
-  history.back();
-});

@@ -132,7 +132,7 @@ nav a:visited {
   max-width: 690px;
   margin-top: -40px;
   margin-bottom: 40px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   text-transform: uppercase;
 }
 
@@ -290,7 +290,7 @@ footer {
   height: 220px;
   width: 300px;
   margin: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /* SIZE CHECKBOX SPAM */
