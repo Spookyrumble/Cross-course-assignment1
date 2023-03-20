@@ -8,10 +8,10 @@ const data = JSON.parse(localStorage.getItem("products"));
 console.log(searchValue + "s" + " " + "jackets");
 
 for (let i = 0; i < data.length; i++) {
-  console.log(data[i]);
+  // console.log(data[i]);
 
   let jacket = data[i];
-  console.log(jacket.jacketId);
+  // console.log(jacket.jacketId);
 
   if (jacket.model === searchValue) {
     h1.innerHTML = "jackets for" + " " + searchValue;
@@ -38,14 +38,17 @@ for (let i = 0; i < data.length; i++) {
                                 <h3>$ ${jacket.price}</h3>
                             </div>
                             <div class="product-cta">
-                                <a id="addCart">Add to cart</a>
+                                <button id="addCart${i}">Add to cart</button>
                                 <a href="../checkout.html">Buy Now</a>
                             </div>
                             </div>`;
 
-    const addToCart = document.querySelector("#addCart");
+    const addToCart = document.querySelector("#addCart" + i);
+    console.log({ i, addToCart });
 
     addToCart.addEventListener("click", function () {
+      // console.log({ i });
+
       const cartDetails = [
         {
           image: `${jacket.image.src}`,
