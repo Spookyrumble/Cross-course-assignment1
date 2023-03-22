@@ -789,16 +789,17 @@ footer {
 
 /* MEDIA */
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .logodiamond {
-    max-width: 320px;
+    max-width: 310px;
   }
 
   .logodiamond img,
   .logodiamond a {
-    margin: auto;
-    margin-top: 30px;
-    max-width: 320px;
+    margin: 30px auto;
+    /* margin-top: 30px; */
+    max-width: 300px;
+    transform: scale(1);
   }
 
   .contact {
@@ -811,6 +812,12 @@ footer {
 
   .emptytext {
     grid-column: 2/5;
+  }
+}
+
+@media (max-width: 720) {
+  .logodiamond img {
+    transform: unset;
   }
 }
 
