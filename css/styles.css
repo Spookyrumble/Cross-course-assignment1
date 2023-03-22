@@ -813,6 +813,10 @@ footer {
   .emptytext {
     grid-column: 2/5;
   }
+
+  .jacket-detail {
+    transform: unset;
+  }
 }
 
 @media (max-width: 720) {
