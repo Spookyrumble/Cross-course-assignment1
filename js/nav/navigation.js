@@ -20,6 +20,6 @@ cartImg.addEventListener("click", function () {
   document.location.href = "../checkout.html";
 });
 
-trashCan.addEventListener("click", function () {
-  localStorage.removeItem("cart");
-});
+// trashCan.addEventListener("click", function () {
+//   localStorage.removeItem("cart");
+// });
