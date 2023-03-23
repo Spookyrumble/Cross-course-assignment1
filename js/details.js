@@ -53,16 +53,14 @@ function renderJacketDetails() {
     const addToCart = document.querySelector("#addCart");
 
     addToCart.addEventListener("click", function () {
-      const cartDetails = [
-        {
-          image: `${item.image.src}`,
-          caption: `${item.image.caption}`,
-          price: `${item.price}`,
-          name: `${item.name}`,
-          details: `${item.detailText}`,
-        },
-        console.log("cart saved to storage"),
-      ];
+      const cartDetails = {
+        image: `${item.image.src}`,
+        caption: `${item.image.caption}`,
+        price: `${item.price}`,
+        name: `${item.name}`,
+        details: `${item.detailText}`,
+      };
+      console.log("cart saved to storage");
       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
       newCart.push(cartDetails);
 

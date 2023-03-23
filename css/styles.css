@@ -579,7 +579,7 @@ footer {
 .checkout {
   display: grid;
   grid-template-columns: 30px 0.5fr 1fr 0.5fr 30px;
-  grid-template-rows: 30px 100px 100px 30px;
+  grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
   color: black;
   background-color: var(--lightblue);
 }

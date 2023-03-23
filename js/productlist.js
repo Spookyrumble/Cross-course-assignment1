@@ -74,16 +74,14 @@ function addToCartListener() {
       const jacket = data.find((el) => {
         return el.jacketId == jacketId;
       });
-      const cartDetails = [
-        {
-          image: `${jacket.image.src}`,
-          caption: `${jacket.image.caption}`,
-          price: `${jacket.price}`,
-          name: `${jacket.name}`,
-          details: `${jacket.detailText}`,
-        },
-        console.log("cart saved to storage"),
-      ];
+      const cartDetails = {
+        image: `${jacket.image.src}`,
+        caption: `${jacket.image.caption}`,
+        price: `${jacket.price}`,
+        name: `${jacket.name}`,
+        details: `${jacket.detailText}`,
+      };
+      console.log("cart saved to storage");
       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
       newCart.push(cartDetails);
 
