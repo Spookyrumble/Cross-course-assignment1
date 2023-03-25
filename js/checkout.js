@@ -1,15 +1,5 @@
 import { setCartImg } from "../js/nav/navigation.js";
 
-const checkoutform = document.querySelector(".checkoutform");
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const addressInput = document.querySelector("#address");
-const postalInput = document.querySelector("#postal");
-const zipInput = document.querySelector("#zip");
-const creditcardInput = document.querySelector("#creditcard");
-const expireInput = document.querySelector("#expire");
-const cvvInput = document.querySelector("#cvv");
-const submitBtn = document.querySelector("#checkout__cta");
 const checkoutCart = document.querySelector(".checkout");
 const sumTotal = document.querySelector("#addedTotal");
 
@@ -81,6 +71,7 @@ const zipForm = document.querySelector("#zip");
 const creditcardForm = document.querySelector("#creditcard");
 const expireForm = document.querySelector("#expire");
 const cvvForm = document.querySelector("#cvv");
+const transformBtn = document.querySelector("#checkout__cta_back");
 
 function validateForm() {
   nameForm.addEventListener("input", function () {
@@ -118,7 +109,7 @@ function validateForm() {
   });
 
   creditcardForm.addEventListener("input", function () {
-    if (checkLength(creditcardForm.value, 23)) {
+    if (checkLength(creditcardForm.value, 7)) {
       console.log("creditcard ok");
       creditcardForm.style.backgroundColor = "lightgreen";
     }
@@ -163,13 +154,33 @@ form.addEventListener("submit", function (event) {
     checkLength(addressForm.value, 4) &&
     checkLength(postalForm.value, 0) &&
     checkLength(zipForm.value, 3) &&
-    checkLength(creditcardForm.value, 15) &&
+    checkLength(creditcardForm.value, 7) &&
     checkLength(expireForm.value, 4) &&
     checkLength(cvvForm.value, 2)
   ) {
-    btn.addEventListener("click", function () {
-      location.reload();
-    });
+    form.innerHTML = `<div>
+    <h3>Thank you for using our shop. Your order has been recieved and will be processed shortly. A confirmation is on its way to the provided email address</h3>
+</div>`;
+    localStorage.removeItem("cart");
+    loadCartItemAndDisplay();
+    checkoutCart.innerHTML = `<div class="cart">
+                                    <p>item</p>
+                                </div>
+                                <div class="emptytext">
+                                    <p style="text-transform: uppercase;">Your order has been recieved</p>
+                                </div>
+                                </div>
+                                <div class="removeBtn">
+                                </div>`;
+
+    transformBtn.innerHTML = `Go Home`;
+    // submitBtn.addEventListener("click", function () {
+    //   console.log("Thank you for using our shop");
+
+    //   form.innerHTML = `<div>
+    //                         <h3>Thank you for using our shop. Your order has been recieved and will be processed shortly.</h3>
+    //                     </div>`;
+    // });
   } else {
     console.log("Please finish form");
   }
