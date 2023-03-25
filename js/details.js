@@ -17,6 +17,8 @@ const dataFilter = jacketData.filter(function (jacketData) {
 console.table(dataFilter);
 
 function renderJacketDetails() {
+  if (dataFilter) {
+  }
   for (let i = 0; i < dataFilter.length; i++) {
     let item = dataFilter[i];
 
@@ -46,7 +48,7 @@ function renderJacketDetails() {
                                   </section>
                                   <section class="index__cta">
                                       <a id="addCart" class="cta" href="#">Add to cart</a>
-                                      <a class="cta" href="../checkout.html">Buy Now</a>
+                                      <a id="buyBtn" class="cta" href="../checkout.html">Buy Now</a>
                                       <a class="cta-small" href="#">Go Back</a>
                                   </section>`;
 
@@ -54,6 +56,7 @@ function renderJacketDetails() {
 
     addToCart.addEventListener("click", function () {
       const cartDetails = {
+        jacketId: `${item.jacketId}`,
         image: `${item.image.src}`,
         caption: `${item.image.caption}`,
         price: `${item.price}`,
@@ -63,8 +66,30 @@ function renderJacketDetails() {
       console.log("cart saved to storage");
       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
       newCart.push(cartDetails);
-
       localStorage.setItem("cart", JSON.stringify(newCart));
+      addToCart.innerHTML = "ITEM ADDED";
+      addToCart.style.backgroundColor = "var(--lightblue)";
+      addToCart.style.color = "var(--darkblue)";
+    });
+
+    const buyBtn = document.querySelector("#buyBtn");
+
+    buyBtn.addEventListener("click", function () {
+      const cartDetails = {
+        jacketId: `${item.jacketId}`,
+        image: `${item.image.src}`,
+        caption: `${item.image.caption}`,
+        price: `${item.price}`,
+        name: `${item.name}`,
+        details: `${item.detailText}`,
+      };
+      console.log("cart saved to storage");
+      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+      newCart.push(cartDetails);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      buyBtn.innerHTML = "ITEM ADDED";
+      buyBtn.style.backgroundColor = "var(--lightblue)";
+      buyBtn.style.color = "var(--darkblue)";
     });
   }
 }

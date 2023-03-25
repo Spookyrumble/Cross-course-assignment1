@@ -1,4 +1,5 @@
-// SETS THE HIGHLIGHT ON NAVIGATION THAT SHOWS WHAT PAGE THE USER IS ON //
+import { setCartImg } from "../js/nav/navigation.js";
+
 const filter = JSON.parse(localStorage.getItem("filter"));
 console.log(filter);
 
@@ -14,6 +15,7 @@ setClassActive(filter);
 
 // GENERATES THE PRODUCTS FROM LOCALLY STORED FILTER (MENS/WOMENS) AND LOCALLY STORED ARRAY //
 const arr = [];
+const arr2 = [];
 
 const searchValue = JSON.parse(localStorage.getItem("filter"));
 
@@ -34,14 +36,6 @@ function renderProducts() {
     if (jacket.model === searchValue) {
       h1.innerHTML = "jackets for" + " " + searchValue;
       container.innerHTML += `<div class="card">
-                                      <div class="sizeboxes">
-                                          <input type="checkbox" name="c1small" id="c1small" />
-                                          <label for="c1small" class="labelbox" id="l1small">s</label>
-                                          <input type="checkbox" name="M" id="c1medium" />
-                                          <label for="c1medium" class="labelbox" id="l1medium">m</label>
-                                          <input type="checkbox" name="L" id="c1large" />
-                                          <label for="c1large" class="labelbox" id="l1large">l</label>
-                                      </div>
                               <div class="card__image">
                                   <a href="detail.html?id=${jacket.jacketId}">
                                   <img
@@ -57,10 +51,11 @@ function renderProducts() {
                               </div>
                               <div class="product-cta">
                                   <a id="addCart${i}" data-jacket='${jacket.jacketId}'>Add to cart</a>
-                                  <a href="../checkout.html">Buy Now</a>
+                                  <a id="buyNow${i}" href="../checkout.html" data-jacket='${jacket.jacketId}'>Buy Now</a>
                               </div>
                               </div>`;
       arr.push(`addCart${i}`);
+      arr2.push(`buyNow${i}`);
     }
   }
 }
@@ -75,6 +70,7 @@ function addToCartListener() {
         return el.jacketId == jacketId;
       });
       const cartDetails = {
+        jacketId: `${jacket.jacketId}`,
         image: `${jacket.image.src}`,
         caption: `${jacket.image.caption}`,
         price: `${jacket.price}`,
@@ -84,12 +80,42 @@ function addToCartListener() {
       console.log("cart saved to storage");
       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
       newCart.push(cartDetails);
-
       localStorage.setItem("cart", JSON.stringify(newCart));
+      addToCart.innerHTML = "ITEM ADDED";
+      addToCart.style.backgroundColor = "var(--lightblue)";
+      addToCart.style.color = "var(--darkblue)";
+      setCartImg();
+    });
+  });
+}
+
+// GRABS CART FROM STORAGE. PUSHES CHANGES AND STORES NEW CART AND SENDS USER TO CHECKOUT //
+function buyNowListener() {
+  arr2.forEach((element) => {
+    const buyNow = document.querySelector(`#${element}`);
+    buyNow.addEventListener("click", function (event) {
+      const jacketId = buyNow.dataset.jacket;
+      const jacket = data.find((el) => {
+        return el.jacketId == jacketId;
+      });
+      const cartDetails = {
+        jacketId: `${jacket.jacketId}`,
+        image: `${jacket.image.src}`,
+        caption: `${jacket.image.caption}`,
+        price: `${jacket.price}`,
+        name: `${jacket.name}`,
+        details: `${jacket.detailText}`,
+      };
+      console.log("cart saved to storage");
+      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+      newCart.push(cartDetails);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      setCartImg();
     });
   });
 }
 
 renderProducts();
 addToCartListener();
+buyNowListener();
 console.log(arr);

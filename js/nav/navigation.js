@@ -20,6 +20,18 @@ cartImg.addEventListener("click", function () {
   document.location.href = "../checkout.html";
 });
 
-// trashCan.addEventListener("click", function () {
-//   localStorage.removeItem("cart");
+export function setCartImg() {
+  let storage = localStorage.getItem("cart");
+
+  if (storage && JSON.parse(storage).length > 0) {
+    cartImg.src = "../../images/Cart_item.png";
+  } else {
+    cartImg.src = "../../images/Cart.png";
+  }
+}
+setCartImg();
+
+// window.addEventListener("storage", function () {
+//   // Call the setCartImg function to update the cart image based on the updated cart data in the storage
+//   setCartImg();
 // });
