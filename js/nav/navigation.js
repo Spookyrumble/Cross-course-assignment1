@@ -29,7 +29,7 @@ export function setCartImg() {
     cartImg.src = "../../images/Cart.png";
   }
 }
-setCartImg();
+// setCartImg();
 
 // window.addEventListener("storage", function () {
 //   // Call the setCartImg function to update the cart image based on the updated cart data in the storage
