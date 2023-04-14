@@ -1,4 +1,4 @@
-import { setCartImg } from "../js/nav/navigation.js";
+import { setCartImg } from "../js/navigation.js";
 
 const checkoutCart = document.querySelector(".checkout");
 const sumTotal = document.querySelector("#addedTotal");
@@ -15,6 +15,8 @@ function loadCartItemAndDisplay() {
       console.log(cart[i]);
       let item = cart[i];
 
+      const price = parseFloat(item.price / 100);
+
       checkoutCart.innerHTML += `<div style="grid-row: ${rowNumber}; grid-column: 2 / -2;">
                                     <div class="product">
                                         <img src=${item.image} alt="Product image" />
@@ -22,13 +24,13 @@ function loadCartItemAndDisplay() {
                                     <div class="itemandprice">
                                         <p>${item.name}</p>
                                         <button id="removeBtn" data-index="${i}">Remove</button>
-                                        <p>$ ${item.price}</p>
+                                        <p>$ ${price}</p>
                                     </div>
                                     <div class="sumtext">
                                     </div>`;
       rowNumber++;
 
-      totalPrice += parseFloat(item.price);
+      totalPrice += price;
       console.log(totalPrice);
     }
     let removeBtns = document.querySelectorAll("#removeBtn");
@@ -54,8 +56,8 @@ function loadCartItemAndDisplay() {
                               </div>`;
   }
 
-  sumTotal.innerHTML = `$${totalPrice.toFixed(2)}`;
-  setCartImg();
+  sumTotal.innerHTML = `$ ${totalPrice.toFixed(2)}`;
+  // setCartImg();
 }
 
 loadCartItemAndDisplay();
