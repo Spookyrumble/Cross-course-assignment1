@@ -26,17 +26,20 @@ async function getsTheProducts() {
   const response = await fetch(url);
   const products = await response.json();
   return products;
-  // console.log(products);
 }
-
-let buttonCounter = 0;
 
 function renderProduct(product) {
   const container = document.querySelector(".products-container");
   const h1 = document.querySelector("h1");
+  const loadingProductAnimation = document.querySelector("#loader");
+  const apifilter = product.attributes[0].name;
+  console.log(product.attributes[0].name);
 
-  h1.innerHTML = "jackets for" + " " + searchValue;
-  container.innerHTML += `<div class="card">
+  if (apifilter == searchValue) {
+    loadingProductAnimation.innerHTML = "";
+
+    h1.innerHTML = "jackets for" + " " + searchValue;
+    container.innerHTML += `<div class="card">
                           <div class="card__image">
                               <a href="detail.html?id=${product.id}">
                               <img
@@ -51,49 +54,50 @@ function renderProduct(product) {
                               <h3>${product.price_html}</h3>
                           </div>
                           <div class="product-cta">
-                              <a id="addCart${buttonCounter}">Add to cart</a>
-                              <a id="buyBtn${buttonCounter}" href="../checkout.html">Buy Now</a>
+                              <a id="addCart${product.id}">Add to cart</a>
+                              <a id="buyBtn${product.id}" href="../checkout.html">Buy Now</a>
                           </div>
                           </div>`;
 
-  const addToCart = document.querySelector(`#addCart${buttonCounter}`);
-  const buyButn = document.querySelector(`#buyBtn${buttonCounter}`);
+    const addToCart = document.querySelector(`#addCart${product.id}`);
+    const buyButn = document.querySelector(`#buyBtn${product.id}`);
 
-  addToCart.addEventListener("click", function () {
-    const cartDetails = {
-      jacketId: `${product.id}`,
-      image: `${product.images[0].src}`,
-      caption: `${product.images[0].alt}`,
-      price: `${product.prices.price}`,
-      name: `${product.name}`,
-      details: `${product.description}`,
-    };
-    console.log("cart saved to storage");
-    let newCart = JSON.parse(localStorage.getItem("cart")) || [];
-    newCart.push(cartDetails);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-    addToCart.innerHTML = "ITEM ADDED";
-    addToCart.style.backgroundColor = "var(--lightblue)";
-    addToCart.style.color = "var(--darkblue)";
-  });
+    addToCart.addEventListener("click", function () {
+      const cartDetails = {
+        jacketId: `${product.id}`,
+        image: `${product.images[0].src}`,
+        caption: `${product.images[0].alt}`,
+        price: `${product.prices.price}`,
+        name: `${product.name}`,
+        details: `${product.description}`,
+      };
+      console.log("cart saved to storage");
+      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+      newCart.push(cartDetails);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      addToCart.innerHTML = "ITEM ADDED";
+      addToCart.style.backgroundColor = "var(--lightblue)";
+      addToCart.style.color = "var(--darkblue)";
+    });
 
-  buyButn.addEventListener("click", function () {
-    const cartDetails = {
-      jacketId: `${product.id}`,
-      image: `${product.images[0].src}`,
-      caption: `${product.images[0].alt}`,
-      price: `${product.prices.price}`,
-      name: `${product.name}`,
-      details: `${product.description}`,
-    };
-    console.log("cart saved to storage");
-    let newCart = JSON.parse(localStorage.getItem("cart")) || [];
-    newCart.push(cartDetails);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-    buyButn.innerHTML = "ITEM ADDED";
-    buyButn.style.backgroundColor = "var(--lightblue)";
-    buyButn.style.color = "var(--darkblue)";
-  });
+    buyButn.addEventListener("click", function () {
+      const cartDetails = {
+        jacketId: `${product.id}`,
+        image: `${product.images[0].src}`,
+        caption: `${product.images[0].alt}`,
+        price: `${product.prices.price}`,
+        name: `${product.name}`,
+        details: `${product.description}`,
+      };
+      console.log("cart saved to storage");
+      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+      newCart.push(cartDetails);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      buyButn.innerHTML = "ITEM ADDED";
+      buyButn.style.backgroundColor = "var(--lightblue)";
+      buyButn.style.color = "var(--darkblue)";
+    });
+  }
 }
 
 function renderProducts(products) {
