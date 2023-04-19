@@ -1,7 +1,7 @@
 import { setCartImg } from "./navigation.js";
 
 const filter = JSON.parse(localStorage.getItem("filter"));
-console.log(filter);
+console.log("API tag filter:", filter);
 
 function setClassActive(filterName) {
   if (filterName == "men") {
@@ -14,10 +14,6 @@ function setClassActive(filterName) {
 setClassActive(filter);
 
 // GENERATES THE PRODUCTS FROM LOCALLY STORED FILTER (MENS/WOMENS) AND LOCALLY STORED ARRAY //
-const arr = [];
-const arr2 = [];
-
-const searchValue = JSON.parse(localStorage.getItem("filter"));
 
 const url =
   "https://codewithspooks.com/rainydaysproducts/wp-json/wc/store/products";
@@ -28,75 +24,37 @@ async function getsTheProducts() {
   return products;
 }
 
+let idCounter = 0;
+
 function renderProduct(product) {
   const container = document.querySelector(".products-container");
   const h1 = document.querySelector("h1");
   const loadingProductAnimation = document.querySelector("#loader");
-  const apifilter = product.attributes[0].name;
-  console.log(product.attributes[0].name);
+  const apifilter = product.tags[0].name;
 
-  if (apifilter == searchValue) {
+  if (filter == apifilter) {
     loadingProductAnimation.innerHTML = "";
 
-    h1.innerHTML = "jackets for" + " " + searchValue;
+    h1.innerHTML = "jackets for" + " " + apifilter;
     container.innerHTML += `<div class="card">
-                          <div class="card__image">
-                              <a href="detail.html?id=${product.id}">
-                              <img
-                                  class="sailor"
-                                  src="${product.images[0].src}"
-                                  alt="${product.images[0].alt}"
-                              />
-                              </a>
-                          </div>
-                          <div class="nameprice">
-                              <h2>${product.name}</h2>
-                              <h3>${product.price_html}</h3>
-                          </div>
-                          <div class="product-cta">
-                              <a id="addCart${product.id}">Add to cart</a>
-                              <a id="buyBtn${product.id}" href="../checkout.html">Buy Now</a>
-                          </div>
-                          </div>`;
-
-    const addToCart = document.querySelector(`#addCart${product.id}`);
-    const buyButn = document.querySelector(`#buyBtn${product.id}`);
-
-    addToCart.addEventListener("click", function () {
-      const cartDetails = {
-        jacketId: `${product.id}`,
-        image: `${product.images[0].src}`,
-        caption: `${product.images[0].alt}`,
-        price: `${product.prices.price}`,
-        name: `${product.name}`,
-        details: `${product.description}`,
-      };
-      console.log("cart saved to storage");
-      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
-      newCart.push(cartDetails);
-      localStorage.setItem("cart", JSON.stringify(newCart));
-      addToCart.innerHTML = "ITEM ADDED";
-      addToCart.style.backgroundColor = "var(--lightblue)";
-      addToCart.style.color = "var(--darkblue)";
-    });
-
-    buyButn.addEventListener("click", function () {
-      const cartDetails = {
-        jacketId: `${product.id}`,
-        image: `${product.images[0].src}`,
-        caption: `${product.images[0].alt}`,
-        price: `${product.prices.price}`,
-        name: `${product.name}`,
-        details: `${product.description}`,
-      };
-      console.log("cart saved to storage");
-      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
-      newCart.push(cartDetails);
-      localStorage.setItem("cart", JSON.stringify(newCart));
-      buyButn.innerHTML = "ITEM ADDED";
-      buyButn.style.backgroundColor = "var(--lightblue)";
-      buyButn.style.color = "var(--darkblue)";
-    });
+                              <div class="card__image">
+                                  <a href="detail.html?id=${product.id}">
+                                  <img
+                                      class="sailor"
+                                      src="${product.images[0].src}"
+                                      alt="${product.images[0].alt}"
+                                  />
+                                  </a>
+                              </div>
+                              <div class="nameprice">
+                                  <h2>${product.name}</h2>
+                                  <h3>${product.price_html}</h3>
+                              </div>
+                              <div class="product-cta">
+                                  <a id="addCart${product.id}" >Add to cart</a>
+                                  <a id="buyNow${product.id}" href="../checkout.html" >Buy Now</a>
+                              </div>
+                            </div>`;
   }
 }
 
@@ -150,6 +108,7 @@ main();
 //                                 </div>`;
 //         arr.push(`addCart${i}`);
 //         arr2.push(`buyNow${i}`);
+
 //       }
 //     }
 //   } catch (error) {
@@ -160,22 +119,22 @@ main();
 // fetchProducts();
 
 // GRABS CART FROM STORAGE. PUSHES CHANGES AND STORES NEW CART //
-// function addToCartListener(product) {
+// function addToCartListener() {
 //   arr.forEach((element) => {
 //     const addToCart = document.querySelector(`#${element}`);
 //     addToCart.addEventListener("click", function (event) {
 //       event.preventDefault();
 //       const jacketId = addToCart.dataset.product;
-//       const product = product.find((el) => {
+//       const jacket = data.find((el) => {
 //         return el.jacketId == jacketId;
 //       });
 //       const cartDetails = {
-//         jacketId: `${product.id}`,
-//         image: `${product.images[0].src}`,
-//         caption: `${product.images[0].alt}`,
-//         price: `${product.prices.price}`,
-//         name: `${product.name}`,
-//         details: `${product.description}`,
+//         jacketId: `${jacket.id}`,
+//         image: `${jacket.images[0].src}`,
+//         caption: `${jacket.images[0].alt}`,
+//         price: `${jacket.prices.price}`,
+//         name: `${jacket.name}`,
+//         details: `${jacket.description}`,
 //       };
 //       console.log("cart saved to storage");
 //       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -189,11 +148,11 @@ main();
 // }
 
 // // GRABS CART FROM STORAGE. PUSHES CHANGES AND STORES NEW CART AND SENDS USER TO CHECKOUT //
-// function buyNowListener(product) {
+// function buyNowListener() {
 //   arr2.forEach((element) => {
 //     const buyNow = document.querySelector(`#${element}`);
 //     buyNow.addEventListener("click", function (event) {
-//       const jacketId = buyNow.dataset.jacket;
+//       const jacketId = buyNow.dataset.product;
 //       const jacket = data.find((el) => {
 //         return el.jacketId == jacketId;
 //       });
@@ -201,7 +160,7 @@ main();
 //         jacketId: `${jacket.id}`,
 //         image: `${jacket.images[0].src}`,
 //         caption: `${jacket.images[0].alt}`,
-//         price: `${jacket.price_html}`,
+//         price: `${jacket.prices.price}`,
 //         name: `${jacket.name}`,
 //         details: `${jacket.description}`,
 //       };
@@ -213,6 +172,3 @@ main();
 //     });
 //   });
 // }
-
-// addToCartListener();
-// buyNowListener();
