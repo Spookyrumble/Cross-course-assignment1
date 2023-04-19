@@ -1,4 +1,5 @@
-import { setCartImg } from "../js/navigation.js";
+import { setCartImg } from "./navigation.js";
+// setCartImg();
 
 const checkoutCart = document.querySelector(".checkout");
 const sumTotal = document.querySelector("#addedTotal");
@@ -57,7 +58,7 @@ function loadCartItemAndDisplay() {
   }
 
   sumTotal.innerHTML = `$ ${totalPrice.toFixed(2)}`;
-  // setCartImg();
+  setCartImg();
 }
 
 loadCartItemAndDisplay();
