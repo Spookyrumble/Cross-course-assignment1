@@ -112,23 +112,55 @@ function validateForm() {
   });
 
   creditcardForm.addEventListener("input", function () {
-    if (checkLength(creditcardForm.value, 7)) {
+    let input = creditcardForm.value.replace(/\D/g, "");
+
+    let formattedInput = "";
+    for (let i = 0; i < input.length && i < 16; i++) {
+      if (i % 4 === 0 && i > 0) {
+        formattedInput += " ";
+      }
+      formattedInput += input[i];
+    }
+    creditcardForm.value = formattedInput;
+    if (input.length === 16) {
       console.log("creditcard ok");
       creditcardForm.style.backgroundColor = "lightgreen";
     }
   });
 
   expireForm.addEventListener("input", function () {
-    if (checkLength(expireForm.value, 4)) {
+    let input = expireForm.value.replace(/\D/g, "");
+
+    if (input.length > 4) {
+      input = input.slice(0, 4);
+    }
+
+    if (input.length > 2) {
+      input = input.slice(0, 2) + "/" + input.slice(2);
+    }
+
+    expireForm.value = input;
+
+    if (/^\d{2}\/\d{2}$/.test(input)) {
       console.log("expire ok");
       expireForm.style.backgroundColor = "lightgreen";
+    } else {
+      expireForm.style.backgroundColor = "";
     }
   });
 
   cvvForm.addEventListener("input", function () {
-    if (checkLength(cvvForm.value, 2)) {
+    let input = cvvForm.value.replace(/\D/g, "");
+    if (input.length > 3) {
+      input = input[0] + input[1] + input[2];
+    }
+    cvvForm.value = input;
+
+    if (checkLength(input, 2)) {
       console.log("cvv ok");
       cvvForm.style.backgroundColor = "lightgreen";
+    } else {
+      cvvForm.style.backgroundColor = "";
     }
   });
 }

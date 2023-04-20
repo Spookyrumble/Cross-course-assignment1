@@ -738,7 +738,7 @@ footer {
 .checkoutform {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  max-width: 300px;
   margin: auto;
   gap: 10px;
   padding: 10px;
@@ -777,51 +777,51 @@ footer {
 }
 
 #name {
-  text-indent: 20px;
+  text-indent: 5px;
   background-size: 12px 14px;
   background-position: 3px;
 }
 
 #email {
-  text-indent: 20px;
+  text-indent: 5px;
   background-size: 14px 14px;
   background-position: 3px;
 }
 
 #address {
-  text-indent: 20px;
+  text-indent: 5px;
   background-size: 16px 13px;
   background-position: 3px;
 }
 
 #postal {
-  text-indent: 20px;
+  text-indent: 5px;
   background-size: 13px 14px;
   background-position: 3px;
-  width: 182px;
+  width: 185px;
 }
 
 #zip {
-  width: 55px;
+  width: 102px;
   text-align: center;
 }
 
 #creditcard {
-  text-indent: 20px;
+  text-indent: 5px;
   background-size: 16px 14px;
   background-position: 3px;
-  width: 165px;
+  width: 185px;
   max-width: 250px;
 }
 
 #expire {
-  width: 35px;
+  min-width: 50px;
   text-align: center;
   size-adjust: 0.1rem;
 }
 
 #cvv {
-  width: 30px;
+  width: 43px;
   text-align: center;
 }
 
@@ -833,11 +833,16 @@ footer {
   text-indent: 20px;
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 1000px lightgreen;
+}
+
 #checkout__cta {
   color: var(--lightblue);
   background-color: var(--darkblue);
   border: thin solid;
   padding: 5px 0px;
+  margin: 15px;
 }
 
 #checkout__cta:hover,
@@ -853,7 +858,7 @@ footer {
   color: var(--lightblue);
   background-color: var(--darkblue);
   border: thin solid;
-  border-radius: 5px;
+
   padding: 1px 0px;
   margin: -125px auto 60px auto;
   justify-content: center;

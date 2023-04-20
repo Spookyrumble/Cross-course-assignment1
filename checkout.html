@@ -89,7 +89,12 @@
             />
             <label for="postal">Post Address and zip code</label>
             <div class="checkoutform__postal">
-              <input type="text" id="postal" placeholder="Post address" />
+              <input
+                type="text"
+                id="postal"
+                placeholder="Post address"
+                autocomplete="address-level2"
+              />
               <input type="number" id="zip" placeholder="zip" />
             </div>
             <label for="creditcard"> Creditcard, expiry date and CVV </label>
@@ -99,7 +104,7 @@
                 id="creditcard"
                 placeholder="Credit card number"
               />
-              <input type="number" id="expire" placeholder="exp" />
+              <input type="text" id="expire" placeholder="exp" />
               <input type="number" id="cvv" placeholder="cvv" />
             </div>
             <input type="submit" id="checkout__cta" value="Buy Now" />
