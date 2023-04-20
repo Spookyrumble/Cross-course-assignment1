@@ -3,6 +3,7 @@ import { setCartImg } from "./navigation.js";
 
 const checkoutCart = document.querySelector(".checkout");
 const sumTotal = document.querySelector("#addedTotal");
+const sumText = document.querySelector(".sumtext");
 
 function loadCartItemAndDisplay() {
   const cart = JSON.parse(localStorage.getItem("cart"));
@@ -196,6 +197,8 @@ form.addEventListener("submit", function (event) {
     form.innerHTML = `<div>
     <h3>Thank you for using our shop. Your order has been recieved and will be processed shortly. A confirmation is on its way to the provided email address</h3>
 </div>`;
+    checkoutCart.style.backgroundColor = "lightgreen";
+    sumText.style.backgroundColor = "lightgreen";
     localStorage.removeItem("cart");
     loadCartItemAndDisplay();
     checkoutCart.innerHTML = `<div class="cart">
