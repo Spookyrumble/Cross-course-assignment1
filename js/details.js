@@ -19,43 +19,65 @@ async function getsProductById() {
 }
 
 function renderProduct(product) {
-  const container = document.querySelector(".detailsContainer");
   const loadingProductAnimation = document.querySelector("#loader");
-
   loadingProductAnimation.innerHTML = "";
 
-  container.innerHTML = `<img id="imgContainer"
-                                  class="jacket-detail"
-                                  src="${product.images[1].src}"
-                                  alt="${product.images[0].alt}"
-                                />
-                                <section class="contact contact_detail">
-                                  <div class="wrapper">
-                                      <div class="detail__price">
-                                          <p>${product.price_html}</p>
-                                      </div>
-                                      <div class="contact-text">
-                                          <h1>${product.name}</h1>
-                                          <p>${product.description}
-                                          </p>
-                                      </div>
-                                  </div>
-                                </section>
-                                <section class="index__cta">
-                                    <a id="addCart" class="cta" >Add to cart</a>
-                                    <a id="buyBtn" class="cta" href="../checkout.html">Buy Now</a>
-                                    <a id="bckbtn" class="cta-small">Go Back</a>
-                                </section>`;
+  const container = document.querySelector(".detailsContainer");
 
-  const addToCart = document.querySelector("#addCart");
-  const buyButn = document.querySelector("#buyBtn");
-  const backButton = document.querySelector("#bckbtn");
+  const image = document.createElement("img");
+  image.classList.add("jacket-detail");
+  image.setAttribute("id", "imgContainer");
+  image.setAttribute("src", `${product.images[1].src}`);
+  image.setAttribute("alt", `${product.images[0].alt}`);
+  container.append(image);
 
-  backButton.addEventListener("click", function () {
+  const section = document.createElement("section");
+  section.classList.add("contact", "contact_detail");
+  container.append(section);
+
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("wrapper");
+  section.append(wrapper);
+
+  const priceContainer = document.createElement("div");
+  priceContainer.classList.add("detail__price");
+  const priceHtml = document.createElement("p");
+  priceHtml.innerHTML = product.price_html;
+  wrapper.append(priceContainer);
+  priceContainer.append(priceHtml);
+
+  const details = document.createElement("div");
+  details.classList.add("contact-text");
+  const nameText = document.createElement("h1");
+  nameText.innerHTML = product.name;
+  const description = document.createElement("p");
+  description.innerHTML = product.description;
+  wrapper.append(details);
+  details.append(nameText);
+  details.append(description);
+
+  const ctaSection = document.createElement("section");
+  ctaSection.classList.add("index__cta");
+  const addCart = document.createElement("a");
+  addCart.classList.add("cta");
+  addCart.innerText = "Add to cart";
+  const buyBtn = document.createElement("a");
+  buyBtn.classList.add("cta");
+  buyBtn.href = "/checkout.html";
+  buyBtn.innerText = "Buy Now";
+  const bckbtn = document.createElement("a");
+  bckbtn.classList.add("cta-small");
+  bckbtn.innerText = "Go Back";
+  container.append(ctaSection);
+  ctaSection.append(addCart);
+  ctaSection.append(buyBtn);
+  ctaSection.append(bckbtn);
+
+  bckbtn.addEventListener("click", function () {
     history.back();
   });
 
-  addToCart.addEventListener("click", function () {
+  addCart.addEventListener("click", function () {
     const cartDetails = {
       jacketId: `${product.id}`,
       image: `${product.images[0].src}`,
@@ -68,12 +90,12 @@ function renderProduct(product) {
     let newCart = JSON.parse(localStorage.getItem("cart")) || [];
     newCart.push(cartDetails);
     localStorage.setItem("cart", JSON.stringify(newCart));
-    addToCart.innerHTML = "ITEM ADDED";
-    addToCart.style.backgroundColor = "var(--lightblue)";
-    addToCart.style.color = "var(--darkblue)";
+    addCart.innerHTML = "ITEM ADDED";
+    addCart.style.backgroundColor = "var(--lightblue)";
+    addCart.style.color = "var(--darkblue)";
   });
 
-  buyButn.addEventListener("click", function () {
+  buyBtn.addEventListener("click", function () {
     const cartDetails = {
       jacketId: `${product.id}`,
       image: `${product.images[0].src}`,
@@ -86,9 +108,9 @@ function renderProduct(product) {
     let newCart = JSON.parse(localStorage.getItem("cart")) || [];
     newCart.push(cartDetails);
     localStorage.setItem("cart", JSON.stringify(newCart));
-    buyButn.innerHTML = "ITEM ADDED";
-    buyButn.style.backgroundColor = "var(--lightblue)";
-    buyButn.style.color = "var(--darkblue)";
+    buyBtn.innerHTML = "ITEM ADDED";
+    buyBtn.style.backgroundColor = "var(--lightblue)";
+    buyBtn.style.color = "var(--darkblue)";
   });
 }
 

@@ -12,8 +12,6 @@ womensButton.addEventListener("click", function () {
   localStorage.setItem("filter", JSON.stringify(women));
 });
 
-// const container = document.querySelector(".singleContainer");
-
 const baseUrl =
   "https://www.codewithspooks.com/rainydaysproducts/wp-json/wc/store/products";
 
@@ -24,8 +22,6 @@ async function fetchFeatured() {
   const data = await response.json();
   return data;
 }
-
-// const featureCont = document.querySelector("singleContainer");
 
 function renderOnSale(data) {
   for (let i = 0; i < data.length; i++) {
@@ -41,7 +37,6 @@ function renderOnSale(data) {
 
     const featuredContainer = document.createElement("div");
     featuredContainer.classList.add("featuredShowcase");
-    container.append(featuredContainer);
 
     const titleText = document.createElement("h2");
     titleText.classList.add("highlightText");
@@ -58,12 +53,13 @@ function renderOnSale(data) {
     priceHtml.style.marginTop = "-10px";
     featuredContainer.append(priceHtml);
 
-    const imgCont = document.createElement("div");
+    const imgCont = document.createElement("a");
     imgCont.classList.add("imgCont");
+    imgCont.href = `/Products/detail.html?id=${onSaleProduct.id}`;
     featuredContainer.append(imgCont);
     const image = document.createElement("img");
     image.setAttribute("src", img);
-    image.setAttribute("alt", img);
+    image.setAttribute("alt", imgAlt);
     imgCont.append(image);
 
     const btnContainer = document.createElement("div");
