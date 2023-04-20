@@ -89,6 +89,21 @@ function renderProduct(product) {
       addToCart.style.backgroundColor = "var(--lightblue)";
       addToCart.style.color = "var(--darkblue)";
     });
+
+    buyNow.addEventListener("click", function () {
+      const cartDetails = {
+        jacketId: `${product.id}`,
+        image: `${product.images[0].src}`,
+        caption: `${product.images[0].src}`,
+        price: `${product.prices.price}`,
+        name: `${product.name}`,
+        details: `${product.description}`,
+      };
+      console.log("cart saved to storage");
+      let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+      newCart.push(cartDetails);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+    });
   }
 }
 

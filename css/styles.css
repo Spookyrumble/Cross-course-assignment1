@@ -232,15 +232,14 @@ footer {
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px;
   margin-bottom: 100px;
   max-width: 650px;
   scale: 0.8;
-  /* max-width: 200px; */
 }
 
-.highligthText {
-  animation: colorChange 1s infinite;
+.highlightText {
+  animation: colorChange 2s infinite;
 }
 
 @keyframes colorChange {
@@ -253,12 +252,6 @@ footer {
   100% {
     color: var(--lightblue);
   }
-}
-
-.saleBtnCont {
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 2fr 1fr; */
 }
 
 .saleBtn {
