@@ -107,60 +107,6 @@ function renderProduct(product) {
   }
 }
 
-// function renderProduct(product) {
-//   const container = document.querySelector(".products-container");
-//   const h1 = document.querySelector("h1");
-//   const loadingProductAnimation = document.querySelector("#loader");
-//   const apifilter = product.tags[0].name;
-
-//   if (filter == apifilter) {
-//     loadingProductAnimation.innerHTML = "";
-
-//     h1.innerHTML = "jackets for" + " " + apifilter;
-//     container.innerHTML += `<div class="card">
-//                               <div class="card__image">
-//                                   <a href="detail.html?id=${product.id}">
-//                                   <img
-//                                       class="sailor"
-//                                       src="${product.images[0].src}"
-//                                       alt="${product.images[0].alt}"
-//                                   />
-//                                   </a>
-//                               </div>
-//                               <div class="nameprice">
-//                                   <h2>${product.name}</h2>
-//                                   <h3>${product.price_html}</h3>
-//                               </div>
-//                               <div class="product-cta">
-//                                   <a id="addCart${idCounter}" >Add to cart</a>
-//                                   <a id="buyNow${idCounter}" href="../checkout.html" >Buy Now</a>
-//                               </div>
-//                             </div>`;
-
-//     const addToCart = document.querySelector(`#addCart${idCounter}`);
-//     addToCart.addEventListener("click", function () {
-//       const cartDetails = {
-//         jacketId: `${product.id}`,
-//         image: `${product.images[0].src}`,
-//         caption: `${product.images[0].src}`,
-//         price: `${product.prices.price}`,
-//         name: `${product.name}`,
-//         details: `${product.description}`,
-//       };
-//       console.log("cart saved to storage");
-//       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
-//       newCart.push(cartDetails);
-//       localStorage.setItem("cart", JSON.stringify(newCart));
-//       addToCart.innerHTML = "ITEM ADDED";
-//       addToCart.style.backgroundColor = "var(--lightblue)";
-//       addToCart.style.color = "var(--darkblue)";
-//     });
-
-//     idCounter++;
-//     console.log("Unique ID increment:", "addCart" + idCounter);
-//   }
-// }
-
 function renderProducts(products) {
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
