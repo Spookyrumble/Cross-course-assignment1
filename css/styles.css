@@ -355,7 +355,7 @@ footer {
   height: 220px;
   width: 300px;
   margin: 10px;
-  /* border-radius: 10px; */
+  padding: 10px;
 }
 
 /* SIZE CHECKBOX SPAM */
@@ -467,12 +467,14 @@ footer {
 
 .product-cta a {
   margin: auto;
+  min-width: 80px;
+  text-align: center;
   color: var(--lightblue);
   font-size: 0.75rem;
   text-decoration: none;
   padding: 5px 18px;
   background-color: var(--darkblue);
-  border-radius: 5px;
+
   border-style: outset;
   border-width: thin;
   text-transform: uppercase;
