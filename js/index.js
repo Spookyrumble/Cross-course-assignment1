@@ -77,8 +77,8 @@ function renderOnSale(data) {
       const cartDetails = {
         jacketId: `${onSaleProduct.id}`,
         image: `${onSaleProduct.images[0].src}`,
-        caption: `${onSaleProduct.images[0].src}`,
-        price: `${cs.price}`,
+        caption: `${onSaleProduct.images[0].alt}`,
+        price: `${onSaleProduct.prices.price}`,
         name: `${onSaleProduct.name}`,
         details: `${onSaleProduct.description}`,
       };
@@ -86,9 +86,9 @@ function renderOnSale(data) {
       let newCart = JSON.parse(localStorage.getItem("cart")) || [];
       newCart.push(cartDetails);
       localStorage.setItem("cart", JSON.stringify(newCart));
-      addToCart.innerHTML = "ITEM ADDED";
-      addToCart.style.backgroundColor = "var(--lightblue)";
-      addToCart.style.color = "var(--darkblue)";
+      btn.innerHTML = "ITEM ADDED";
+      btn.style.backgroundColor = "var(--lightblue)";
+      btn.style.color = "var(--darkblue)";
     });
   }
 }
