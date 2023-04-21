@@ -57,7 +57,6 @@ function loadCartItemAndDisplay() {
   }
 
   sumTotal.innerHTML = `$ ${totalPrice.toFixed(2)}`;
-  setCartImg();
 }
 
 loadCartItemAndDisplay();
