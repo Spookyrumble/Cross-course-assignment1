@@ -11,8 +11,7 @@ function setClassActive(filterName) {
 }
 setClassActive(filter);
 
-// GENERATES THE PRODUCTS FROM LOCALLY STORED FILTER (MENS/WOMENS) AND LOCALLY STORED ARRAY //
-
+// GENERATES THE PRODUCTS WITH LOCALLY STORED FILTER (MENS/WOMENS) AND LOCALLY STORED ARRAY //
 const url =
   "https://codewithspooks.com/rainydaysproducts/wp-json/wc/store/products";
 
@@ -107,6 +106,7 @@ function renderProduct(product) {
   }
 }
 
+// LOOPS THE DATA AND PASSES THE LOOPED DATA TO THE DISPLAY FUNCTION
 function renderProducts(products) {
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
@@ -114,6 +114,7 @@ function renderProducts(products) {
   }
 }
 
+// FETCHES THE DATA AND PASSES IT TO THE FOR LOOP FUNCTION
 async function main() {
   const products = await getsTheProducts();
   renderProducts(products);

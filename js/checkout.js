@@ -1,10 +1,8 @@
-import { setCartImg } from "./navigation.js";
-// setCartImg();
-
 const checkoutCart = document.querySelector(".checkout");
 const sumTotal = document.querySelector("#addedTotal");
 const sumText = document.querySelector(".sumtext");
 
+// GRABS CART FROM LOCAL STORAGE AND DISPLAYS ITEMS IN CART
 function loadCartItemAndDisplay() {
   const cart = JSON.parse(localStorage.getItem("cart"));
   let rowNumber = 2;
@@ -64,7 +62,7 @@ function loadCartItemAndDisplay() {
 
 loadCartItemAndDisplay();
 
-// CHECKOUTFORM //
+// CHECKOUTFORM VALIDATION FOR EACH INPUT. ALSO FORMATS CREDIT CARD NUMBERS + EXPIRE DATE + CVV.
 
 const form = document.querySelector(".checkoutform");
 const nameForm = document.querySelector("#name");
@@ -167,6 +165,7 @@ function validateForm() {
 }
 validateForm();
 
+// CHECK LENGTH FUNCTION
 function checkLength(value, len) {
   if (value.length > len) {
     return true;
@@ -175,12 +174,14 @@ function checkLength(value, len) {
   }
 }
 
+// EMAIL FORMAT FUNCTION
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
 
+// CHECKS IF EVERYTHING IS OK FOR SUBMISSION FUNCTION
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -212,13 +213,6 @@ form.addEventListener("submit", function (event) {
                                 </div>`;
 
     transformBtn.innerHTML = `Go Home`;
-    // submitBtn.addEventListener("click", function () {
-    //   console.log("Thank you for using our shop");
-
-    //   form.innerHTML = `<div>
-    //                         <h3>Thank you for using our shop. Your order has been recieved and will be processed shortly.</h3>
-    //                     </div>`;
-    // });
   } else {
     console.log("Please finish form");
   }

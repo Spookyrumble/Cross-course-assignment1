@@ -6,6 +6,7 @@ const messageInput = document.querySelector("#message");
 const sendButton = document.querySelector("#checkout__cta");
 const inputs = document.querySelectorAll("label");
 
+// LISTENERS TO THE FORM INPUTS AND VALIDATING THEM ON THE GO
 function validateForm() {
   nameInput.addEventListener("input", function () {
     if (checkLength(nameInput.value, 1)) {
@@ -37,6 +38,7 @@ function validateForm() {
 }
 validateForm();
 
+// CHECK LENGTH FUNCTION
 function checkLength(value, len) {
   if (value.length > len) {
     return true;
@@ -45,12 +47,14 @@ function checkLength(value, len) {
   }
 }
 
+// EMAIL FORMAT FUNCTION
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
 
+// MESSAGE CREATOR FOR FORM SUCCESS OR ERROR
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 

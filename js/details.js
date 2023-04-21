@@ -1,9 +1,12 @@
+// GRABS THE ID FROM THE URL AND LOGS IT
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
-console.log(id);
+console.log("Product ID:" + " " + id);
+
+// FETCHES THE URL + ID
 
 const url =
   "https://codewithspooks.com/rainydaysproducts/wp-json/wc/store/products/";
@@ -16,6 +19,7 @@ async function getsProductById() {
   return product;
 }
 
+// CREATES AND DISPLAY THE PRODUCTS
 function renderProduct(product) {
   const loadingProductAnimation = document.querySelector("#loader");
   loadingProductAnimation.innerHTML = "";
@@ -112,6 +116,7 @@ function renderProduct(product) {
   });
 }
 
+// AWAITS THE FETCH AND PASSES THE DATA TO THE DISPLAY FUNCTION
 async function main() {
   const product = await getsProductById();
   renderProduct(product);

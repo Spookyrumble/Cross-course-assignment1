@@ -1,3 +1,5 @@
+// CREATES A LOCALLY STORED FILTER ITEM
+
 const mensButton = document.querySelector(".cta-small");
 
 mensButton.addEventListener("click", function () {
@@ -12,6 +14,7 @@ womensButton.addEventListener("click", function () {
   localStorage.setItem("filter", JSON.stringify(women));
 });
 
+// FETCHES THE FEATURED=TRUE FROM THE STORE API
 const baseUrl =
   "https://www.codewithspooks.com/rainydaysproducts/wp-json/wc/store/products";
 
@@ -25,6 +28,7 @@ async function fetchFeatured() {
   return data;
 }
 
+// DISPLAYS THE PRODUCTS ON THE LANDING PAGE
 function renderOnSale(data) {
   for (let i = 0; i < data.length; i++) {
     const onSaleProduct = data[i];
@@ -75,6 +79,7 @@ function renderOnSale(data) {
 
     container.append(featuredContainer);
 
+    //BUY NOW BUTTON LISTENER TO PUSH ITEM TO CART
     btn.addEventListener("click", function () {
       const cartDetails = {
         jacketId: `${onSaleProduct.id}`,
@@ -95,6 +100,7 @@ function renderOnSale(data) {
   }
 }
 
+// ONE FUNCTION TO START THEM ALL. PASSES THE FETCH TO THE DISPLAY FUNCTION
 async function main() {
   const onSaleProduct = await fetchFeatured();
   renderOnSale(onSaleProduct);
