@@ -1,5 +1,3 @@
-import { setCartImg } from "../js/navigation.js";
-
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);

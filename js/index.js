@@ -17,8 +17,10 @@ const baseUrl =
 
 const featured = "?featured=true";
 
+const fullUrl = baseUrl + featured;
+
 async function fetchFeatured() {
-  const response = await fetch(baseUrl + featured);
+  const response = await fetch(fullUrl);
   const data = await response.json();
   return data;
 }
