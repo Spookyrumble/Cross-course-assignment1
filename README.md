@@ -1,40 +1,31 @@
-# Rainydays
+# Rainydays - Ecommerce
 
-2022_HTML-CSS_CA_HMA_rainy-days
+![logo](images/Logodiamond.png)
 
 ## Description
 
 A webshop for his and hers jackets made for educational purposes.
 
-## Changes made from the figma design:
+## Built with
 
-- Removed quick buy button from product list/cards.
+- Figma
+- HTML
+- CSS
+- Javascript
+- Wordpress REST API
 
-- Product counter is non-functional because I could not figure out if it was even doable with HTML and CSS only.
+## Getting started
 
-- Card hover removed because it bugged out the flexbox.
+1. Clone the repo: `https://github.com/HMAsp/HTML-CSS_CA_HMA_2022`
 
-- Checkout cta's moved to have the name:required function with the input:submit.
+## Contributing
 
-- Added checkmark to the L size checkbox. Only added this one because I used "Large" on the checkout page.
+I would appreciate if you would open a pull request so the code can be reviewed if you want to play around with it.
 
-- Tried to make nav sticky but I couldn't get it to work right with my design so I decided to let it stay on top.
-*after review I have made it fixed and moved the logo underneath the header instead of having it on top of it like designed.*
+## Contact
 
-### Executing program
+If you want to reach out to me please feel free to send me a message on either Twitter or LinkedIn.
 
-Web:
-https://chic-lollipop-939ca8.netlify.app/
+[Twitter](https://twitter.com/HansMarAnd)
 
-Github repo:
-https://github.com/HMAsp/HTML-CSS_CA_HMA_2022
-
-Figma prototype (some changes has been implemented):
-https://www.figma.com/file/b8mN054iAOAhxxhDOAhUPB/Design_CA_hans-marius-andreassen_wp?node-id=57%3A469
-
-## Authors
-
-Hans Marius Andreassen
-hmandreassen82@gmail.com
-Twitter: @HansMarAnd
-Github: HMAsp
+[LinkedIn](https://www.linkedin.com/in/hma1982/)
