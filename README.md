@@ -17,6 +17,7 @@ A webshop for his and hers jackets made for educational purposes.
 ## Getting started
 
 1. Clone the repo: `https://github.com/HMAsp/HTML-CSS_CA_HMA_2022`
+2. Visit website: `https://chic-lollipop-939ca8.netlify.app`
 
 ## Contributing
 
