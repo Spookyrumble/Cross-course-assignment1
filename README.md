@@ -30,5 +30,5 @@ If you want to get in contact with me you can use either of the following:
 * [Twitter](https://twitter.com/HansMarAnd)
 * [LinkedIn](https://www.linkedin.com/in/hma1982/)
 
-Or visit my portfolio linked on my profile page and use the contact form!
-[Github profile page](https://github.com/HMAsp)
+Or visit my portfolio linked on my [Github profile page](https://github.com/HMAsp) and use the contact form!
+
