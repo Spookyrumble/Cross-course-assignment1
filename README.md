@@ -4,7 +4,7 @@
 
 ## Description
 
-A webshop for his and hers jackets made for educational purposes.
+A webshop school project for his and hers jackets. Made for educational purposes.
 
 ## Built with
 
